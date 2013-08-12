@@ -1,5 +1,5 @@
 <!--===========================================================================
-  This is the build file for the sample-module project.
+  This is the build file for the sample-use-full project.
   
   This build file will use the build-res/subfloor.xml file as the default build
   process and should only override the tasks that need to differ from
@@ -7,7 +7,12 @@
   
   See build-res/subfloor.xml for more details
 ============================================================================-->
-<project name="sample-module" basedir="." default="default">
+<project name="sample-use-full" basedir="." default="default">
+
+    <description>
+        This build file provides a lightweight configuration for using the reporting engine in an
+        standalone project.
+    </description>
 
     <property file="${user.home}/.pentaho-reporting-build-settings.properties"
               description="Per user override settings-file for all pentaho-reporting projects."/>

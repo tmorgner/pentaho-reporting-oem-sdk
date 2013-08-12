@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sample-data-source/sample-data-source.iml" filepath="$PROJECT_DIR$/sample-data-source/sample-data-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-element/sample-element.iml" filepath="$PROJECT_DIR$/sample-element/sample-element.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-expression/sample-expression.iml" filepath="$PROJECT_DIR$/sample-expression/sample-expression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-formula-function/sample-formula-function.iml" filepath="$PROJECT_DIR$/sample-formula-function/sample-formula-function.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-module/sample-module.iml" filepath="$PROJECT_DIR$/sample-module/sample-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-report-preprocessor/sample-report-preprocessor.iml" filepath="$PROJECT_DIR$/sample-report-preprocessor/sample-report-preprocessor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-use-full/sample-use-full.iml" filepath="$PROJECT_DIR$/sample-use-full/sample-use-full.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-use-lightweight/sample-use-lightweight.iml" filepath="$PROJECT_DIR$/sample-use-lightweight/sample-use-lightweight.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -16,8 +16,21 @@
 	</publications>
 
 	<dependencies defaultconf="default_internal->default">
-		<!-- reporting engine dependencies -->
-		<dependency org="${ivy.artifact.group}" name="pentaho-reporting-engine-classic-core" rev="${project.revision}" transitive="true" changing="true" />
+        <!-- reporting engine dependencies -->
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-core"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-scripting"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-drill-down"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-toc"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-wizard-core"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-legacy-charts"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
 
 	</dependencies>
 </ivy-module>

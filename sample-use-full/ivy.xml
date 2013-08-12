@@ -27,6 +27,14 @@
                     rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
         <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-toc"
                     rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-mondrian"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-olap4j"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-kettle"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+        <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-xpath"
+                    rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
         <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-wizard-core"
                     rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
         <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-legacy-charts"
