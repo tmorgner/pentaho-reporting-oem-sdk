@@ -57,6 +57,23 @@
     -->
 
     <!-- Override default dist target to do a dist-full instead -->
-    <target name="dist" depends="dist-full"/>
+    <target name="dist" depends="clean-local-jar,dist-full,copy-local-jar"/>
 
+    <target name="clean-local-jar">
+      <delete file="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
+    </target>
+
+    <target name="copy-local-jar">
+      <copy file="${dist.dir}/${ivy.artifact.id}-${project.revision}.jar" tofile="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
+    </target>
+
+    <target name="generate.manifest" depends="subfloor.generate.manifest">
+      <manifestclasspath property="jar.classpath" jarfile="dist.jar">
+        <classpath refid="classpath" />
+      </manifestclasspath>
+
+      <manifest file="${dist.manifest.file}" mode="update">
+        <attribute name="Class-Path" value="${jar.classpath}"/>
+      </manifest>
+    </target>
 </project>

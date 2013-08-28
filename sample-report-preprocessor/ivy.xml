@@ -32,5 +32,7 @@
         <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-legacy-charts"
                     rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
 
+		    <dependency org="org.slf4j" name="slf4j-jcl" rev="1.6.4" transitive="false"/>
+		    <dependency org="org.slf4j" name="slf4j-api" rev="1.6.4" transitive="false"/>
 	</dependencies>
 </ivy-module>
