@@ -1,0 +1,59 @@
+<meta-data xmlns="http://reporting.pentaho.org/namespaces/engine/classic/metadata/1.0">
+
+  <include-globals src="res://org/pentaho/reporting/engine/classic/core/metadata/global-meta-elements.xml"/>
+
+  <element name="sdk-sample-text-element" expert="false" hidden="false" preferred="false"
+           bundle-name="org.pentaho.reporting.sdk.element.SampleTextElementTypeBundle"
+           implementation="org.pentaho.reporting.sdk.element.SampleTextElementType">
+
+    <attribute-group-ref ref="common-attributes"/>
+    <attribute-group-ref ref="interactivity"/>
+    <attribute-group-ref ref="static-text-value"/>
+    <attribute-group-ref ref="rich-text-attributes"/>
+
+    <attribute namespace="http://reporting.pentaho.org/namespaces/engine/classic/sdk/sample-element/1.0"
+               name="template-string"
+               mandatory="true"
+               expert="false"
+               hidden="false"
+               preferred="true"
+               value-type="java.lang.String"
+               value-role="Message"/>
+
+    <style-group-ref ref="borders"/>
+    <style-group-ref ref="common"/>
+    <style-group-ref ref="text"/>
+    <style-group-ref ref="layout"/>
+
+  </element>
+
+  <element name="sdk-sample-graphics-element" expert="false" hidden="false" preferred="false"
+           bundle-name="org.pentaho.reporting.sdk.element.SampleGraphicsElementTypeBundle"
+           implementation="org.pentaho.reporting.sdk.element.SampleGraphicsElementType">
+
+    <attribute-group-ref ref="common-attributes"/>
+    <attribute-group-ref ref="interactivity"/>
+    <attribute-group-ref ref="static-text-value"/>
+    <attribute-group-ref ref="replaced-content-attributes"/>
+
+    <attribute namespace="http://reporting.pentaho.org/namespaces/engine/classic/sdk/sample-element/1.0"
+               name="template-string"
+               mandatory="true"
+               expert="false"
+               hidden="false"
+               preferred="true"
+               value-type="java.lang.String"
+               value-role="Message"/>
+
+    <style-group-ref ref="borders"/>
+    <style-group-ref ref="common"/>
+    <style-group-ref ref="replaced-content"/>
+    <style-group-ref ref="layout"/>
+
+    <style bundle-name="org.pentaho.reporting.sdk.element.SampleGraphicsElementTypeBundle"
+           name="sdk-image-background-alpha"/>
+
+  </element>
+
+
+</meta-data>
