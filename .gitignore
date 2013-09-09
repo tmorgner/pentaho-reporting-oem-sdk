@@ -5,6 +5,7 @@ js-lib/
 lib/
 out/
 test-lib/
+test-output/
 eclipse-bin/
 override.properties
 testdata.log
