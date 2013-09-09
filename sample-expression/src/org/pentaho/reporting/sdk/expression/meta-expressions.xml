@@ -1,0 +1,23 @@
+<meta-data xmlns="http://reporting.pentaho.org/namespaces/engine/classic/metadata/1.0">
+
+  <expression class="org.pentaho.reporting.sdk.expression.HelloWorldExpression"
+              bundle-name="org.pentaho.reporting.sdk.expression.HelloWorldExpressionBundle"
+              result="java.lang.String" expert="false" hidden="false" preferred="true">
+    <property name="dependencyLevel"
+              mandatory="false" preferred="false" value-role="Value" expert="true" hidden="false"/>
+    <property name="name" mandatory="true" preferred="true" value-role="Name" expert="false" hidden="false"/>
+    <property name="field" mandatory="false" preferred="false" value-role="Field" expert="false" hidden="false"/>
+  </expression>
+
+  <expression class="org.pentaho.reporting.sdk.expression.CountIfFunction"
+              bundle-name="org.pentaho.reporting.sdk.expression.CountIfFunctionBundle"
+              result="java.lang.Number" expert="false" hidden="false" preferred="true">
+    <property name="dependencyLevel" mandatory="false" preferred="false" value-role="Value" expert="true"
+              hidden="false"/>
+    <property name="group" mandatory="false" preferred="false" value-role="Group" expert="false" hidden="false"/>
+    <property name="crosstabFilterGroup" mandatory="false" preferred="false" value-role="Group" expert="false" hidden="false"/>
+    <property name="name" mandatory="true" preferred="true" value-role="Name" expert="false" hidden="false"/>
+    <property name="formula" mandatory="false" preferred="false" value-role="Formula" expert="false" hidden="false"/>
+  </expression>
+
+</meta-data>
