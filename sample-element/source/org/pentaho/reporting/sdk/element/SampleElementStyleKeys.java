@@ -13,7 +13,7 @@ public class SampleElementStyleKeys
    * this case.
    */
   public static final StyleKey IMAGE_BACKGROUND_ALPHA =
-      StyleKey.getStyleKey("sdk-image-background-alpha", Float.class, false, true);
+      StyleKey.getStyleKey("sdk-graphics-background-alpha", Float.class, false, true);
 
   private SampleElementStyleKeys()
   {

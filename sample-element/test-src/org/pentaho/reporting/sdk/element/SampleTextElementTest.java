@@ -119,6 +119,6 @@ public class SampleTextElementTest extends TestCase
 
   public void testMetaDataDefined()
   {
-
+    assertTrue(ElementTestHelper.validateElementMetaData(SampleTextElementType.INSTANCE));
   }
 }

@@ -133,6 +133,6 @@ public class SampleGraphicsElementTest extends TestCase
 
   public void testMetaDataDefined()
   {
-
+    assertTrue(ElementTestHelper.validateElementMetaData(SampleGraphicsElementType.INSTANCE));
   }
 }

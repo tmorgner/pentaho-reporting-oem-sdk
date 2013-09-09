@@ -50,8 +50,7 @@
     <style-group-ref ref="replaced-content"/>
     <style-group-ref ref="layout"/>
 
-    <style bundle-name="org.pentaho.reporting.sdk.element.SampleGraphicsElementTypeBundle"
-           name="sdk-image-background-alpha"/>
+    <style bundle-name="org.pentaho.reporting.sdk.element.styles" name="sdk-graphics-background-alpha"/>
 
   </element>
 
