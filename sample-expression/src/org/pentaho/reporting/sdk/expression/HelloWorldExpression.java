@@ -3,8 +3,6 @@ package org.pentaho.reporting.sdk.expression;
 import org.pentaho.reporting.engine.classic.core.function.AbstractExpression;
 import org.pentaho.reporting.engine.classic.core.function.Expression;
 import org.pentaho.reporting.libraries.base.util.StringUtils;
-import org.pentaho.reporting.libraries.formula.lvalues.TypeValuePair;
-import org.pentaho.reporting.libraries.formula.typing.coretypes.TextType;
 
 public class HelloWorldExpression extends AbstractExpression
 {
@@ -56,9 +54,9 @@ public class HelloWorldExpression extends AbstractExpression
     String text = computeGreetingName();
     if (text == null)
     {
-      return new TypeValuePair(TextType.TYPE, String.format("Hello World!", text));
+      return String.format("Hello World!", text);
     }
 
-    return new TypeValuePair(TextType.TYPE, String.format("Hello World, %s!", text));
+    return String.format("Hello World, %s!", text);
   }
 }

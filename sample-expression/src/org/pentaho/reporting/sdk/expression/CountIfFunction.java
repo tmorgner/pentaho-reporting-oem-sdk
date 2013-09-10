@@ -4,13 +4,14 @@ import java.math.BigDecimal;
 
 import org.pentaho.reporting.engine.classic.core.event.ReportEvent;
 import org.pentaho.reporting.engine.classic.core.function.AbstractFunction;
+import org.pentaho.reporting.engine.classic.core.function.AggregationFunction;
 import org.pentaho.reporting.engine.classic.core.function.Expression;
 import org.pentaho.reporting.engine.classic.core.function.ExpressionRuntime;
 import org.pentaho.reporting.engine.classic.core.function.FormulaExpression;
 import org.pentaho.reporting.engine.classic.core.function.FunctionUtilities;
 import org.pentaho.reporting.engine.classic.core.util.Sequence;
 
-public class CountIfFunction extends AbstractFunction
+public class CountIfFunction extends AbstractFunction implements AggregationFunction
 {
   public static final BigDecimal ONE = new BigDecimal(1);
   public static final BigDecimal ZERO = new BigDecimal(0);
@@ -142,7 +143,8 @@ public class CountIfFunction extends AbstractFunction
    */
   public void itemsAdvanced(final ReportEvent event)
   {
-    if (Boolean.TRUE.equals(formulaExpression.getValue()) == false)
+    Object value = formulaExpression.getValue();
+    if (Boolean.TRUE.equals(value) == false)
     {
       return;
     }

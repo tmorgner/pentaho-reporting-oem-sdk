@@ -15,6 +15,6 @@ public class SampleExpressionModule extends AbstractModule
   public void initialize(final SubSystem subSystem) throws ModuleInitializeException
   {
     ElementMetaDataParser.initializeOptionalExpressionsMetaData
-        ("org/pentaho/reporting/sdk/expression/HelloWorldExpressionBundle.properties");
+        ("org/pentaho/reporting/sdk/expression/meta-expressions.xml");
   }
 }
