@@ -1,0 +1,380 @@
+Tablemodel contains 10 rows.
+Column: 0 Name=id; DataType=class java.lang.Object
+Column: 1 Name=xmlns; DataType=class java.lang.Object
+Column: 2 Name=Title; DataType=class java.lang.Object
+Column: 3 Name=Address; DataType=class java.lang.Object
+Column: 4 Name=City; DataType=class java.lang.Object
+Column: 5 Name=State; DataType=class java.lang.Object
+Column: 6 Name=Phone; DataType=class java.lang.Object
+Column: 7 Name=Latitude; DataType=class java.lang.Object
+Column: 8 Name=Longitude; DataType=class java.lang.Object
+Column: 9 Name=Rating; DataType=class java.lang.Object
+Column: 10 Name=Distance; DataType=class java.lang.Object
+Column: 11 Name=Url; DataType=class java.lang.Object
+Column: 12 Name=ClickUrl; DataType=class java.lang.Object
+Column: 13 Name=MapUrl; DataType=class java.lang.Object
+Column: 14 Name=BusinessUrl; DataType=class java.lang.Object
+Column: 15 Name=BusinessClickUrl; DataType=class java.lang.Object
+Column: 16 Name=Categories; DataType=class java.lang.Object
+Checking the data inside
+ValueAt (0, 0) is in a generic column and is of type class java.lang.String
+ValueAt (0, 1) is in a generic column and is of type class java.lang.String
+ValueAt (0, 2) is in a generic column and is of type class java.lang.String
+ValueAt (0, 3) is in a generic column and is of type class java.lang.String
+ValueAt (0, 4) is in a generic column and is of type class java.lang.String
+ValueAt (0, 5) is in a generic column and is of type class java.lang.String
+ValueAt (0, 6) is in a generic column and is of type class java.lang.String
+ValueAt (0, 7) is in a generic column and is of type class java.lang.String
+ValueAt (0, 8) is in a generic column and is of type class java.lang.String
+ValueAt (0, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (0, 10) is in a generic column and is of type class java.lang.String
+ValueAt (0, 11) is in a generic column and is of type class java.lang.String
+ValueAt (0, 12) is in a generic column and is of type class java.lang.String
+ValueAt (0, 13) is in a generic column and is of type class java.lang.String
+ValueAt (0, 14) is in a generic column and is of type class java.lang.String
+ValueAt (0, 15) is in a generic column and is of type class java.lang.String
+ValueAt (0, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (1, 0) is in a generic column and is of type class java.lang.String
+ValueAt (1, 1) is in a generic column and is of type class java.lang.String
+ValueAt (1, 2) is in a generic column and is of type class java.lang.String
+ValueAt (1, 3) is in a generic column and is of type class java.lang.String
+ValueAt (1, 4) is in a generic column and is of type class java.lang.String
+ValueAt (1, 5) is in a generic column and is of type class java.lang.String
+ValueAt (1, 6) is in a generic column and is of type class java.lang.String
+ValueAt (1, 7) is in a generic column and is of type class java.lang.String
+ValueAt (1, 8) is in a generic column and is of type class java.lang.String
+ValueAt (1, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (1, 10) is in a generic column and is of type class java.lang.String
+ValueAt (1, 11) is in a generic column and is of type class java.lang.String
+ValueAt (1, 12) is in a generic column and is of type class java.lang.String
+ValueAt (1, 13) is in a generic column and is of type class java.lang.String
+ValueAt (1, 14) is in a generic column and is of type class java.lang.String
+ValueAt (1, 15) is in a generic column and is of type class java.lang.String
+ValueAt (1, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (2, 0) is in a generic column and is of type class java.lang.String
+ValueAt (2, 1) is in a generic column and is of type class java.lang.String
+ValueAt (2, 2) is in a generic column and is of type class java.lang.String
+ValueAt (2, 3) is in a generic column and is of type class java.lang.String
+ValueAt (2, 4) is in a generic column and is of type class java.lang.String
+ValueAt (2, 5) is in a generic column and is of type class java.lang.String
+ValueAt (2, 6) is in a generic column and is of type class java.lang.String
+ValueAt (2, 7) is in a generic column and is of type class java.lang.String
+ValueAt (2, 8) is in a generic column and is of type class java.lang.String
+ValueAt (2, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (2, 10) is in a generic column and is of type class java.lang.String
+ValueAt (2, 11) is in a generic column and is of type class java.lang.String
+ValueAt (2, 12) is in a generic column and is of type class java.lang.String
+ValueAt (2, 13) is in a generic column and is of type class java.lang.String
+ValueAt (2, 14) is in a generic column and is of type class java.lang.String
+ValueAt (2, 15) is in a generic column and is of type class java.lang.String
+ValueAt (2, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (3, 0) is in a generic column and is of type class java.lang.String
+ValueAt (3, 1) is in a generic column and is of type class java.lang.String
+ValueAt (3, 2) is in a generic column and is of type class java.lang.String
+ValueAt (3, 3) is in a generic column and is of type class java.lang.String
+ValueAt (3, 4) is in a generic column and is of type class java.lang.String
+ValueAt (3, 5) is in a generic column and is of type class java.lang.String
+ValueAt (3, 6) is in a generic column and is of type class java.lang.String
+ValueAt (3, 7) is in a generic column and is of type class java.lang.String
+ValueAt (3, 8) is in a generic column and is of type class java.lang.String
+ValueAt (3, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (3, 10) is in a generic column and is of type class java.lang.String
+ValueAt (3, 11) is in a generic column and is of type class java.lang.String
+ValueAt (3, 12) is in a generic column and is of type class java.lang.String
+ValueAt (3, 13) is in a generic column and is of type class java.lang.String
+ValueAt (3, 14) is in a generic column and is of type class java.lang.String
+ValueAt (3, 15) is in a generic column and is of type class java.lang.String
+ValueAt (3, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (4, 0) is in a generic column and is of type class java.lang.String
+ValueAt (4, 1) is in a generic column and is of type class java.lang.String
+ValueAt (4, 2) is in a generic column and is of type class java.lang.String
+ValueAt (4, 3) is in a generic column and is of type class java.lang.String
+ValueAt (4, 4) is in a generic column and is of type class java.lang.String
+ValueAt (4, 5) is in a generic column and is of type class java.lang.String
+ValueAt (4, 6) is in a generic column and is of type class java.lang.String
+ValueAt (4, 7) is in a generic column and is of type class java.lang.String
+ValueAt (4, 8) is in a generic column and is of type class java.lang.String
+ValueAt (4, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (4, 10) is in a generic column and is of type class java.lang.String
+ValueAt (4, 11) is in a generic column and is of type class java.lang.String
+ValueAt (4, 12) is in a generic column and is of type class java.lang.String
+ValueAt (4, 13) is in a generic column and is of type class java.lang.String
+ValueAt (4, 14) is in a generic column and is of type class java.lang.String
+ValueAt (4, 15) is in a generic column and is of type class java.lang.String
+ValueAt (4, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (5, 0) is in a generic column and is of type class java.lang.String
+ValueAt (5, 1) is in a generic column and is of type class java.lang.String
+ValueAt (5, 2) is in a generic column and is of type class java.lang.String
+ValueAt (5, 3) is in a generic column and is of type class java.lang.String
+ValueAt (5, 4) is in a generic column and is of type class java.lang.String
+ValueAt (5, 5) is in a generic column and is of type class java.lang.String
+ValueAt (5, 6) is in a generic column and is of type class java.lang.String
+ValueAt (5, 7) is in a generic column and is of type class java.lang.String
+ValueAt (5, 8) is in a generic column and is of type class java.lang.String
+ValueAt (5, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (5, 10) is in a generic column and is of type class java.lang.String
+ValueAt (5, 11) is in a generic column and is of type class java.lang.String
+ValueAt (5, 12) is in a generic column and is of type class java.lang.String
+ValueAt (5, 13) is in a generic column and is of type class java.lang.String
+ValueAt (5, 14) is null
+ValueAt (5, 15) is null
+ValueAt (5, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (6, 0) is in a generic column and is of type class java.lang.String
+ValueAt (6, 1) is in a generic column and is of type class java.lang.String
+ValueAt (6, 2) is in a generic column and is of type class java.lang.String
+ValueAt (6, 3) is in a generic column and is of type class java.lang.String
+ValueAt (6, 4) is in a generic column and is of type class java.lang.String
+ValueAt (6, 5) is in a generic column and is of type class java.lang.String
+ValueAt (6, 6) is in a generic column and is of type class java.lang.String
+ValueAt (6, 7) is in a generic column and is of type class java.lang.String
+ValueAt (6, 8) is in a generic column and is of type class java.lang.String
+ValueAt (6, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (6, 10) is in a generic column and is of type class java.lang.String
+ValueAt (6, 11) is in a generic column and is of type class java.lang.String
+ValueAt (6, 12) is in a generic column and is of type class java.lang.String
+ValueAt (6, 13) is in a generic column and is of type class java.lang.String
+ValueAt (6, 14) is in a generic column and is of type class java.lang.String
+ValueAt (6, 15) is in a generic column and is of type class java.lang.String
+ValueAt (6, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (7, 0) is in a generic column and is of type class java.lang.String
+ValueAt (7, 1) is in a generic column and is of type class java.lang.String
+ValueAt (7, 2) is in a generic column and is of type class java.lang.String
+ValueAt (7, 3) is in a generic column and is of type class java.lang.String
+ValueAt (7, 4) is in a generic column and is of type class java.lang.String
+ValueAt (7, 5) is in a generic column and is of type class java.lang.String
+ValueAt (7, 6) is in a generic column and is of type class java.lang.String
+ValueAt (7, 7) is in a generic column and is of type class java.lang.String
+ValueAt (7, 8) is in a generic column and is of type class java.lang.String
+ValueAt (7, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (7, 10) is in a generic column and is of type class java.lang.String
+ValueAt (7, 11) is in a generic column and is of type class java.lang.String
+ValueAt (7, 12) is in a generic column and is of type class java.lang.String
+ValueAt (7, 13) is in a generic column and is of type class java.lang.String
+ValueAt (7, 14) is in a generic column and is of type class java.lang.String
+ValueAt (7, 15) is in a generic column and is of type class java.lang.String
+ValueAt (7, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (8, 0) is in a generic column and is of type class java.lang.String
+ValueAt (8, 1) is in a generic column and is of type class java.lang.String
+ValueAt (8, 2) is in a generic column and is of type class java.lang.String
+ValueAt (8, 3) is in a generic column and is of type class java.lang.String
+ValueAt (8, 4) is in a generic column and is of type class java.lang.String
+ValueAt (8, 5) is in a generic column and is of type class java.lang.String
+ValueAt (8, 6) is in a generic column and is of type class java.lang.String
+ValueAt (8, 7) is in a generic column and is of type class java.lang.String
+ValueAt (8, 8) is in a generic column and is of type class java.lang.String
+ValueAt (8, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (8, 10) is in a generic column and is of type class java.lang.String
+ValueAt (8, 11) is in a generic column and is of type class java.lang.String
+ValueAt (8, 12) is in a generic column and is of type class java.lang.String
+ValueAt (8, 13) is in a generic column and is of type class java.lang.String
+ValueAt (8, 14) is in a generic column and is of type class java.lang.String
+ValueAt (8, 15) is in a generic column and is of type class java.lang.String
+ValueAt (8, 16) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (9, 0) is in a generic column and is of type class java.lang.String
+ValueAt (9, 1) is in a generic column and is of type class java.lang.String
+ValueAt (9, 2) is in a generic column and is of type class java.lang.String
+ValueAt (9, 3) is in a generic column and is of type class java.lang.String
+ValueAt (9, 4) is in a generic column and is of type class java.lang.String
+ValueAt (9, 5) is in a generic column and is of type class java.lang.String
+ValueAt (9, 6) is in a generic column and is of type class java.lang.String
+ValueAt (9, 7) is in a generic column and is of type class java.lang.String
+ValueAt (9, 8) is in a generic column and is of type class java.lang.String
+ValueAt (9, 9) is in a generic column and is of type class java.util.LinkedHashMap
+ValueAt (9, 10) is in a generic column and is of type class java.lang.String
+ValueAt (9, 11) is in a generic column and is of type class java.lang.String
+ValueAt (9, 12) is in a generic column and is of type class java.lang.String
+ValueAt (9, 13) is in a generic column and is of type class java.lang.String
+ValueAt (9, 14) is null
+ValueAt (9, 15) is null
+ValueAt (9, 16) is in a generic column and is of type class java.util.LinkedHashMap
+TableModel has no meta-data.
+TableModel has no meta-data.
+Tablemodel contains 10 rows.
+Column: 0 Name=id; DataType=class java.lang.Object
+Column: 1 Name=xmlns; DataType=class java.lang.Object
+Column: 2 Name=Title; DataType=class java.lang.Object
+Column: 3 Name=Address; DataType=class java.lang.Object
+Column: 4 Name=City; DataType=class java.lang.Object
+Column: 5 Name=State; DataType=class java.lang.Object
+Column: 6 Name=Phone; DataType=class java.lang.Object
+Column: 7 Name=Latitude; DataType=class java.lang.Object
+Column: 8 Name=Longitude; DataType=class java.lang.Object
+Column: 9 Name=Rating; DataType=class java.lang.Object
+Column: 10 Name=Distance; DataType=class java.lang.Object
+Column: 11 Name=Url; DataType=class java.lang.Object
+Column: 12 Name=ClickUrl; DataType=class java.lang.Object
+Column: 13 Name=MapUrl; DataType=class java.lang.Object
+Column: 14 Name=BusinessUrl; DataType=class java.lang.Object
+Column: 15 Name=BusinessClickUrl; DataType=class java.lang.Object
+Column: 16 Name=Categories; DataType=class java.lang.Object
+Checking the data inside
+ValueAt (0, 0) is '21373494'
+ValueAt (0, 1) is 'urn:yahoo:lcl'
+ValueAt (0, 2) is 'Sushi Bistro'
+ValueAt (0, 3) is '455 Balboa St'
+ValueAt (0, 4) is 'San Francisco'
+ValueAt (0, 5) is 'CA'
+ValueAt (0, 6) is '(415) 933-7100'
+ValueAt (0, 7) is '37.7771'
+ValueAt (0, 8) is '-122.463517'
+ValueAt (0, 9) is '{AverageRating=5, TotalRatings=37, TotalReviews=37, LastReviewDate=1286309799, LastReviewIntro= Nice place: I enjoyed this place very much, the food was very good! The sushi was fresh and very tasty. I like the variety in the menu and the presentation of the food was a nice amenity. I was a little disappointed with the ambiance. Not a bad thing, I thought it would be a little bit more lively and crowded, but instead of it was more quiet than I thought. Which wasnt a bad thing, since my friend and I didnt have to wait for a table and could hear each other talk. Overall, I would recommend this place, but I little bit overrated, I thought reading from the other reviewers.}'
+ValueAt (0, 10) is '2.40'
+ValueAt (0, 11) is 'http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco'
+ValueAt (0, 12) is 'http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco'
+ValueAt (0, 13) is 'http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco?viewtype=map'
+ValueAt (0, 14) is 'http://www.sushibistrosf.com'
+ValueAt (0, 15) is 'http://www.sushibistrosf.com'
+ValueAt (0, 16) is '{Category=[{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926236","content":"Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (1, 0) is '21382989'
+ValueAt (1, 1) is 'urn:yahoo:lcl'
+ValueAt (1, 2) is 'Ebisu'
+ValueAt (1, 3) is '1283 9th Ave'
+ValueAt (1, 4) is 'San Francisco'
+ValueAt (1, 5) is 'CA'
+ValueAt (1, 6) is '(415) 566-1770'
+ValueAt (1, 7) is '37.76444'
+ValueAt (1, 8) is '-122.46666'
+ValueAt (1, 9) is '{AverageRating=4.5, TotalRatings=38, TotalReviews=38, LastReviewDate=1368723727, LastReviewIntro= This is the best sushi in SF so far. Its the freshest tasting and has some of the most original sushi dishes Ive found yet. The bacon wrapped scallops, seafood salad and pink cadillac are especially worth noting. Service and atmosphere are nice as well. I cant wait to try the next thing, their menu is loaded with tasty options.}'
+ValueAt (1, 10) is '2.72'
+ValueAt (1, 11) is 'http://local.yahoo.com/info-21382989-ebisu-san-francisco'
+ValueAt (1, 12) is 'http://local.yahoo.com/info-21382989-ebisu-san-francisco'
+ValueAt (1, 13) is 'http://local.yahoo.com/info-21382989-ebisu-san-francisco?viewtype=map'
+ValueAt (1, 14) is 'http://www.ebisusushi.com/'
+ValueAt (1, 15) is 'http://www.ebisusushi.com/'
+ValueAt (1, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926057","content":"Bars & Pubs"},{"id":"96926210","content":"Japanese Restaurants"},{"id":"96926217","content":"Family Style Restaurants"}]}'
+ValueAt (2, 0) is '21361882'
+ValueAt (2, 1) is 'urn:yahoo:lcl'
+ValueAt (2, 2) is 'Blowfish Sushi to Die for - SF'
+ValueAt (2, 3) is '2170 Bryant St'
+ValueAt (2, 4) is 'San Francisco'
+ValueAt (2, 5) is 'CA'
+ValueAt (2, 6) is '(415) 285-3848'
+ValueAt (2, 7) is '37.759611'
+ValueAt (2, 8) is '-122.41009'
+ValueAt (2, 9) is '{AverageRating=4, TotalRatings=43, TotalReviews=43, LastReviewDate=1273879621, LastReviewIntro= My friends and I have been to Blowfish probably 100 times in the past 7 years. I live 1 block away. It was convenient and the sushi is good. We always tolerated the bad service and the attitude. Of the 100 times weve been, weve probably had good service 20% of the time. Despite the frequency of our patronage we rarely got recognized by the staff and OFTEN waited 20-25 minutes (or more) for drink orders, the check, etc... and the attitude and aloofness was palpable. The last time I went I sat at the bar and a male bartender clearly seemed annoyed with us for no reason at all. We begged for drinks, opened our own Sake bottle (not twist off - corkscrew), and were pretty much ignored all night long - right down to waiting FOREVER for our bill. I told my friends "this is the last time...." Its embarrassing to bring in guests from out of town. I eat out 99% of the time and they have the worst service I have ever consistently experienced.Do yourself a favor go to nearby Live Sushi Bar or Sushi Bistro and be waited on by people who smile with no attitude. The sushi at both places is excellent too.and Blowfish...get over yourself.dont dont, dont, dont...dont believe the hype.....Chris B}'
+ValueAt (2, 10) is '1.32'
+ValueAt (2, 11) is 'http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco'
+ValueAt (2, 12) is 'http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco'
+ValueAt (2, 13) is 'http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco?viewtype=map'
+ValueAt (2, 14) is 'http://www.blowfishsushi.com/webform1.aspx?bhcp=1'
+ValueAt (2, 15) is 'http://www.blowfishsushi.com/webform1.aspx?bhcp=1'
+ValueAt (2, 16) is '{Category=[{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926164","content":"Chinese Restaurants"},{"id":"96926236","content":"Restaurants"},{"id":"96926179","content":"Seafood Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (3, 0) is '21362386'
+ValueAt (3, 1) is 'urn:yahoo:lcl'
+ValueAt (3, 2) is 'Godzila Sushi'
+ValueAt (3, 3) is '1800 Divisadero St'
+ValueAt (3, 4) is 'San Francisco'
+ValueAt (3, 5) is 'CA'
+ValueAt (3, 6) is '(415) 931-1773'
+ValueAt (3, 7) is '37.786355'
+ValueAt (3, 8) is '-122.439903'
+ValueAt (3, 9) is '{AverageRating=4.5, TotalRatings=13, TotalReviews=13, LastReviewDate=1185406279, LastReviewIntro= Love this place!}'
+ValueAt (3, 10) is '1.28'
+ValueAt (3, 11) is 'http://local.yahoo.com/info-21362386-godzila-sushi-san-francisco'
+ValueAt (3, 12) is 'http://local.yahoo.com/info-21362386-godzila-sushi-san-francisco'
+ValueAt (3, 13) is 'http://local.yahoo.com/info-21362386-godzila-sushi-san-francisco?viewtype=map'
+ValueAt (3, 14) is 'http://www.godzilasushi.com/'
+ValueAt (3, 15) is 'http://www.godzilasushi.com/'
+ValueAt (3, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926234","content":"Carry Out & Take Out"},{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926164","content":"Chinese Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (4, 0) is '21332685'
+ValueAt (4, 1) is 'urn:yahoo:lcl'
+ValueAt (4, 2) is 'Tokyo Go Go'
+ValueAt (4, 3) is '3174 16th St'
+ValueAt (4, 4) is 'San Francisco'
+ValueAt (4, 5) is 'CA'
+ValueAt (4, 6) is '(415) 864-2288'
+ValueAt (4, 7) is '37.764943'
+ValueAt (4, 8) is '-122.423538'
+ValueAt (4, 9) is '{AverageRating=5, TotalRatings=11, TotalReviews=11, LastReviewDate=1222466662, LastReviewIntro= I can easily rate this as the best sushi restaurant I have ever encountered. There is a roll with asparagus and Sake, with a thin slice of lemon on top. The flavors are unreal!!! Everyone there is very friendly and professional. I live 40 miles away, and there are literally hundreds of japanese restaurants between my home and Tpkyo GoGo, and when I want the best, I go here.}'
+ValueAt (4, 10) is '0.87'
+ValueAt (4, 11) is 'http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco'
+ValueAt (4, 12) is 'http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco'
+ValueAt (4, 13) is 'http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco?viewtype=map'
+ValueAt (4, 14) is 'http://www.tokyogogo.com/'
+ValueAt (4, 15) is 'http://www.tokyogogo.com/'
+ValueAt (4, 16) is '{Category=[{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926236","content":"Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (5, 0) is '21384019'
+ValueAt (5, 1) is 'urn:yahoo:lcl'
+ValueAt (5, 2) is 'Goemon Japanese Restaurant'
+ValueAt (5, 3) is '1524 Irving St'
+ValueAt (5, 4) is 'San Francisco'
+ValueAt (5, 5) is 'CA'
+ValueAt (5, 6) is '(415) 664-2288'
+ValueAt (5, 7) is '37.763823'
+ValueAt (5, 8) is '-122.474249'
+ValueAt (5, 9) is '{AverageRating=5, TotalRatings=9, TotalReviews=9, LastReviewDate=1295310286, LastReviewIntro= The food is great and the atmosphere is great!!!Too bad Gan was a abusive father,...If you dont believe me, then ask him about his son.}'
+ValueAt (5, 10) is '3.12'
+ValueAt (5, 11) is 'http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco'
+ValueAt (5, 12) is 'http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco'
+ValueAt (5, 13) is 'http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco?viewtype=map'
+ValueAt (5, 14) is 'null'
+ValueAt (5, 15) is 'null'
+ValueAt (5, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926210","content":"Japanese Restaurants"},{"id":"96926217","content":"Family Style Restaurants"}]}'
+ValueAt (6, 0) is '21374866'
+ValueAt (6, 1) is 'urn:yahoo:lcl'
+ValueAt (6, 2) is 'Marina Sushi Bar'
+ValueAt (6, 3) is '2020 Lombard St'
+ValueAt (6, 4) is 'San Francisco'
+ValueAt (6, 5) is 'CA'
+ValueAt (6, 6) is '(415) 474-9332'
+ValueAt (6, 7) is '37.80026'
+ValueAt (6, 8) is '-122.434898'
+ValueAt (6, 9) is '{AverageRating=4.5, TotalRatings=9, TotalReviews=9, LastReviewDate=1203657349, LastReviewIntro= Marina Sushi has the best sushi Ive ever eaten. Eric and Sonny make you feel so welcome. The hand rolls are great and so are the specialty rolls. If you like deep fried rolls, try Erics specialty. Also great recommendation is the butter fish sashimi. It goes down so smooth. Sit at the sushi bar for a fun time. The interior is very inviting. A definite must try!}'
+ValueAt (6, 10) is '1.81'
+ValueAt (6, 11) is 'http://local.yahoo.com/info-21374866-marina-sushi-bar-san-francisco'
+ValueAt (6, 12) is 'http://local.yahoo.com/info-21374866-marina-sushi-bar-san-francisco'
+ValueAt (6, 13) is 'http://local.yahoo.com/info-21374866-marina-sushi-bar-san-francisco?viewtype=map'
+ValueAt (6, 14) is 'http://marinasushibar.food.officelive.com/default.aspx'
+ValueAt (6, 15) is 'http://marinasushibar.food.officelive.com/default.aspx'
+ValueAt (6, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926164","content":"Chinese Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (7, 0) is '21385126'
+ValueAt (7, 1) is 'urn:yahoo:lcl'
+ValueAt (7, 2) is 'Yum Yum Fish'
+ValueAt (7, 3) is '2181 Irving St'
+ValueAt (7, 4) is 'San Francisco'
+ValueAt (7, 5) is 'CA'
+ValueAt (7, 6) is '(415) 566-6433'
+ValueAt (7, 7) is '37.763143'
+ValueAt (7, 8) is '-122.481117'
+ValueAt (7, 9) is '{AverageRating=4.5, TotalRatings=12, TotalReviews=12, LastReviewDate=1162707313, LastReviewIntro= Best sushi i ever had in the bay area, reasonable prices, cant ask for more...}'
+ValueAt (7, 10) is '3.50'
+ValueAt (7, 11) is 'http://local.yahoo.com/info-21385126-yum-yum-fish-san-francisco'
+ValueAt (7, 12) is 'http://local.yahoo.com/info-21385126-yum-yum-fish-san-francisco'
+ValueAt (7, 13) is 'http://local.yahoo.com/info-21385126-yum-yum-fish-san-francisco?viewtype=map'
+ValueAt (7, 14) is 'http://www.yumyumfishsushi.com/'
+ValueAt (7, 15) is 'http://www.yumyumfishsushi.com/'
+ValueAt (7, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926179","content":"Seafood Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (8, 0) is '21329298'
+ValueAt (8, 1) is 'urn:yahoo:lcl'
+ValueAt (8, 2) is 'Akiko's Sushi Bar'
+ValueAt (8, 3) is '542 Mason St'
+ValueAt (8, 4) is 'San Francisco'
+ValueAt (8, 5) is 'CA'
+ValueAt (8, 6) is '(415) 989-8218'
+ValueAt (8, 7) is '37.788498'
+ValueAt (8, 8) is '-122.409945'
+ValueAt (8, 9) is '{AverageRating=4.5, TotalRatings=6, TotalReviews=6, LastReviewDate=1225756054, LastReviewIntro= Saba tasted old, service very slow despite being only one in restaurant, very limited nigiri variety}'
+ValueAt (8, 10) is '0.95'
+ValueAt (8, 11) is 'http://local.yahoo.com/info-21329298-akiko-s-sushi-bar-san-francisco'
+ValueAt (8, 12) is 'http://local.yahoo.com/info-21329298-akiko-s-sushi-bar-san-francisco'
+ValueAt (8, 13) is 'http://local.yahoo.com/info-21329298-akiko-s-sushi-bar-san-francisco?viewtype=map'
+ValueAt (8, 14) is 'http://www.chinsushibar.com/akiko_index.html'
+ValueAt (8, 15) is 'http://www.chinsushibar.com/akiko_index.html'
+ValueAt (8, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926229","content":"Southeast Asian Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926164","content":"Chinese Restaurants"},{"id":"96926210","content":"Japanese Restaurants"}]}'
+ValueAt (9, 0) is '21378834'
+ValueAt (9, 1) is 'urn:yahoo:lcl'
+ValueAt (9, 2) is 'Minami Restaurant'
+ValueAt (9, 3) is '1900 Clement St'
+ValueAt (9, 4) is 'San Francisco'
+ValueAt (9, 5) is 'CA'
+ValueAt (9, 6) is '(415) 387-5913'
+ValueAt (9, 7) is '37.782365'
+ValueAt (9, 8) is '-122.479713'
+ValueAt (9, 9) is '{AverageRating=5, TotalRatings=6, TotalReviews=6, LastReviewDate=1307591559, LastReviewIntro= Tiny place with big taste of food. The price is very reasonable for excellent Japanese food. The Sashimi is super fresh and tasty. Love this place.}'
+ValueAt (9, 10) is '3.30'
+ValueAt (9, 11) is 'http://local.yahoo.com/info-21378834-minami-restaurant-san-francisco'
+ValueAt (9, 12) is 'http://local.yahoo.com/info-21378834-minami-restaurant-san-francisco'
+ValueAt (9, 13) is 'http://local.yahoo.com/info-21378834-minami-restaurant-san-francisco?viewtype=map'
+ValueAt (9, 14) is 'null'
+ValueAt (9, 15) is 'null'
+ValueAt (9, 16) is '{Category=[{"id":"96926236","content":"Restaurants"},{"id":"96926205","content":"Sushi Restaurants"},{"id":"96926210","content":"Japanese Restaurants"},{"id":"96926217","content":"Family Style Restaurants"}]}'
