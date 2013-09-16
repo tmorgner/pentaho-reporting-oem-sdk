@@ -1,0 +1,30 @@
+Tablemodel contains 5 rows.
+Column: 0 Name=Id; DataType=class java.lang.Integer
+Column: 1 Name=Value; DataType=class java.lang.String
+Checking the data inside
+ValueAt (0, 0) is in a typed column and is of type class java.lang.Integer
+ValueAt (0, 1) is in a typed column and is of type class java.lang.String
+ValueAt (1, 0) is in a typed column and is of type class java.lang.Integer
+ValueAt (1, 1) is in a typed column and is of type class java.lang.String
+ValueAt (2, 0) is in a typed column and is of type class java.lang.Integer
+ValueAt (2, 1) is in a typed column and is of type class java.lang.String
+ValueAt (3, 0) is in a typed column and is of type class java.lang.Integer
+ValueAt (3, 1) is in a typed column and is of type class java.lang.String
+ValueAt (4, 0) is in a typed column and is of type class java.lang.Integer
+ValueAt (4, 1) is in a typed column and is of type class java.lang.String
+TableModel has no meta-data.
+TableModel has no meta-data.
+Tablemodel contains 5 rows.
+Column: 0 Name=Id; DataType=class java.lang.Integer
+Column: 1 Name=Value; DataType=class java.lang.String
+Checking the data inside
+ValueAt (0, 0) is '-1'
+ValueAt (0, 1) is '(Select All)'
+ValueAt (1, 0) is '1'
+ValueAt (1, 1) is 'North'
+ValueAt (2, 0) is '2'
+ValueAt (2, 1) is 'East'
+ValueAt (3, 0) is '3'
+ValueAt (3, 1) is 'South'
+ValueAt (4, 0) is '4'
+ValueAt (4, 1) is 'West'
