@@ -32,8 +32,8 @@ public class QueryParametrizer extends PropertyLookupParser
       throw new NullPointerException("Parameter datarow must not be null");
     }
 
-    this.collectedFields = new LinkedHashSet<String>();
-    this.collectedParameter = new LinkedHashMap<String, String>();
+    this.collectedFields = new LinkedHashSet<>();
+    this.collectedParameter = new LinkedHashMap<>();
     this.parameters = parameters;
     this.locale = locale;
     setMarkerChar('$');
@@ -57,7 +57,7 @@ public class QueryParametrizer extends PropertyLookupParser
     }
 
     counter += 1;
-    String parameterReference = "param_" + counter;
+    String parameterReference = "param_" + counter; // NON-NLS
 
     final String parameterName = tokenizer.nextToken();
     final Object o = parameters.get(parameterName);

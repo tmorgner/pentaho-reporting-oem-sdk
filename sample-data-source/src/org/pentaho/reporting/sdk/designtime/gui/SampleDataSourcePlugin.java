@@ -13,7 +13,6 @@ import org.pentaho.reporting.engine.classic.core.designtime.DefaultDesignTimeCon
 import org.pentaho.reporting.engine.classic.core.designtime.DesignTimeContext;
 import org.pentaho.reporting.engine.classic.core.metadata.DataFactoryMetaData;
 import org.pentaho.reporting.engine.classic.core.metadata.DataFactoryRegistry;
-import org.pentaho.reporting.engine.classic.core.modules.misc.datafactory.sequence.SequenceDataFactory;
 import org.pentaho.reporting.sdk.datasource.SampleDataFactory;
 
 public class SampleDataSourcePlugin implements DataSourcePlugin
@@ -47,7 +46,7 @@ public class SampleDataSourcePlugin implements DataSourcePlugin
     {
       editor = new SampleDataSourceEditorDialog();
     }
-    return editor.performConfiguration(context, (SequenceDataFactory) input, selectedQueryName);
+    return editor.performConfiguration(context, (SampleDataFactory) input, selectedQueryName);
   }
 
   public DataFactoryMetaData getMetaData()

@@ -141,14 +141,14 @@ public abstract class AbstractScriptableDataFactory extends AbstractDataFactory
         return null;
       }
 
-      final LinkedHashSet<String> fields = new LinkedHashSet<String>();
+      final LinkedHashSet<String> fields = new LinkedHashSet<>();
       fields.addAll(Arrays.asList(referencedFieldsInternal));
       fields.addAll(Arrays.asList(additionalFields));
       return fields.toArray(new String[fields.size()]);
     }
     catch (ReportDataFactoryException rx)
     {
-      logger.debug("Failed to compute referenced fields", rx);
+      logger.debug("Failed to compute referenced fields", rx); // NON-NLS
       return null;
     }
   }
@@ -172,7 +172,7 @@ public abstract class AbstractScriptableDataFactory extends AbstractDataFactory
         return null;
       }
 
-      final ArrayList<Object> queryHash = new ArrayList<Object>();
+      final ArrayList<Object> queryHash = new ArrayList<>();
       queryHash.add(getClass().getName());
       queryHash.add(queryHashInternal);
       queryHash.add(scriptingSupport.getScriptingLanguage(query));
@@ -181,7 +181,7 @@ public abstract class AbstractScriptableDataFactory extends AbstractDataFactory
     }
     catch (ReportDataFactoryException rx)
     {
-      logger.debug("Failed to compute query hash", rx);
+      logger.debug("Failed to compute query hash", rx); // NON-NLS
       return null;
     }
   }

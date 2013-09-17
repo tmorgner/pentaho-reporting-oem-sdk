@@ -69,9 +69,9 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
       URL url = new URL(b.toString());
       InputStream inputStream = url.openStream();
       Map o = (Map) JSONValue.parseKeepingOrder(inputStream);
-      Map root = (Map) o.get("query");
-      Map results = (Map) root.get("results");
-      JSONArray result = (JSONArray) results.get("Result");
+      Map root = (Map) o.get("query"); // NON-NLS
+      Map results = (Map) root.get("results"); // NON-NLS
+      JSONArray result = (JSONArray) results.get("Result"); // NON-NLS
 
       TypedTableModel model = new TypedTableModel();
       for (Object o1 : result)
@@ -113,7 +113,7 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
   protected Object getQueryHashInternal(final String realQuery,
                                         final DataRow parameter) throws ReportDataFactoryException
   {
-    ArrayList<String> hash = new ArrayList<String>();
+    ArrayList<String> hash = new ArrayList<>();
     hash.add(realQuery);
     hash.add(urlPattern);
     return hash;

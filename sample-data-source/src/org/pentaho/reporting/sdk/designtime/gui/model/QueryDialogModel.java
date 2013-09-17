@@ -24,4 +24,5 @@ public interface QueryDialogModel<T> extends Iterable<Query<T>>
   String getGlobalScriptLanguage();
   String getGlobalScript();
 
+  void clear();
 }

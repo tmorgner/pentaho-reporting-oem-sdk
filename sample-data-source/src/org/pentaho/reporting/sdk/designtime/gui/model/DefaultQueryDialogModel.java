@@ -153,6 +153,21 @@ public class DefaultQueryDialogModel<T> implements QueryDialogModel<T>
     });
   }
 
+  public void clear()
+  {
+    setSelectedQuery(null);
+    backend.clear();
+
+    final QueryDialogModelEvent<T> event = new QueryDialogModelEvent<>(this);
+    fireEvent(new Func<QueryDialogModelListener<T>>()
+    {
+      public void run(final QueryDialogModelListener<T> value)
+      {
+        value.queryDataChanged(event);
+      }
+    });
+  }
+
   public void updateSelectedQuery(final Query<T> newQuery)
   {
     updateQuery(selectedIndex, newQuery);
