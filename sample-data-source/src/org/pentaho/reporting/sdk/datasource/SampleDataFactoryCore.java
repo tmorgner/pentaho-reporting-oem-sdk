@@ -1,4 +1,4 @@
-package org.pentaho.reporting.sdk.sequence;
+package org.pentaho.reporting.sdk.datasource;
 
 import org.pentaho.reporting.engine.classic.core.DataFactory;
 import org.pentaho.reporting.engine.classic.core.DataRow;

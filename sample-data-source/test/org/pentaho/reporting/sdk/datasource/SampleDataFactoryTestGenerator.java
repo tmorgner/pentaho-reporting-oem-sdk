@@ -1,4 +1,4 @@
-package org.pentaho.reporting.sdk.sequence;
+package org.pentaho.reporting.sdk.datasource;
 
 public class SampleDataFactoryTestGenerator
 {

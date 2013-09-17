@@ -1,4 +1,4 @@
-package org.pentaho.reporting.sdk.sequence;
+package org.pentaho.reporting.sdk.datasource;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;

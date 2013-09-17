@@ -1,4 +1,4 @@
-package org.pentaho.reporting.sdk.sequence.writer;
+package org.pentaho.reporting.sdk.datasource.parser;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -15,13 +15,11 @@ import org.pentaho.reporting.libraries.xmlns.common.AttributeList;
 import org.pentaho.reporting.libraries.xmlns.writer.DefaultTagDescription;
 import org.pentaho.reporting.libraries.xmlns.writer.XmlWriter;
 import org.pentaho.reporting.libraries.xmlns.writer.XmlWriterSupport;
-import org.pentaho.reporting.sdk.sequence.SampleDataFactory;
-import org.pentaho.reporting.sdk.sequence.SampleDataSourceModule;
+import org.pentaho.reporting.sdk.datasource.SampleDataFactory;
+import org.pentaho.reporting.sdk.datasource.SampleDataSourceModule;
 
 public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWriterHandler
 {
-  public static final String ROOT_ELEMENT_TAG = "sdk-datasource";
-
   public SampleDataFactoryBundleWriterHandler()
   {
   }
@@ -44,7 +42,7 @@ public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWr
     final AttributeList rootAttrs = new AttributeList();
     rootAttrs.addNamespaceDeclaration("data", SampleDataSourceModule.NAMESPACE);
 
-    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, ROOT_ELEMENT_TAG, rootAttrs, XmlWriter.OPEN);
+    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.ROOT_ELEMENT_TAG, rootAttrs, XmlWriter.OPEN);
 
     final SampleDataFactory dataFactory = (SampleDataFactory) rawDataFactory;
     writeConfig(xmlWriter, dataFactory);
@@ -59,11 +57,11 @@ public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWr
   private void writeConfig(final XmlWriter xmlWriter, final SampleDataFactory dataFactory) throws IOException
   {
     final AttributeList configAttrs = new AttributeList();
-    if (StringUtils.isEmpty(dataFactory.getQueryPattern()) == false)
+    if (StringUtils.isEmpty(dataFactory.getUrlPattern()) == false)
     {
-      configAttrs.setAttribute(SampleDataSourceModule.NAMESPACE, "url-pattern", dataFactory.getQueryPattern());
+      configAttrs.setAttribute(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.URL_PATTERN_ATTR, dataFactory.getUrlPattern());
     }
-    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "config", configAttrs, XmlWriterSupport.CLOSE);
+    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.CONFIG_TAG, configAttrs, XmlWriterSupport.CLOSE);
   }
 
   private void writeGlobalScript(final XmlWriter xmlWriter, final SampleDataFactory dataFactory) throws IOException
@@ -72,8 +70,8 @@ public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWr
     final String globalScriptLanguage = dataFactory.getGlobalScriptLanguage();
     if (StringUtils.isEmpty(globalScript) == false && StringUtils.isEmpty(globalScriptLanguage) == false)
     {
-      xmlWriter.writeTag
-          (SampleDataSourceModule.NAMESPACE, "global-script", "language", globalScriptLanguage, XmlWriterSupport.OPEN);
+      xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.GLOBAL_SCRIPT_TAG,
+          SampleDataFactoryTags.LANGUAGE_ATTR, globalScriptLanguage, XmlWriterSupport.OPEN);
       xmlWriter.writeTextNormalized(globalScript, false);
       xmlWriter.writeCloseTag();
     }
@@ -83,15 +81,15 @@ public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWr
                             final SampleDataFactory dataFactory) throws IOException
   {
     final String globalScriptLanguage = dataFactory.getGlobalScriptLanguage();
-    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "query-definitions", XmlWriterSupport.OPEN);
+    xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.QUERY_DEFINITIONS_TAG, XmlWriterSupport.OPEN);
     final String[] queryNames = dataFactory.getQueryNames();
     for (int i = 0; i < queryNames.length; i++)
     {
       final String queryName = queryNames[i];
       final String query = dataFactory.getQuery(queryName);
-      xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "query", "name", queryName, XmlWriterSupport.OPEN);
+      xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.QUERY_TAG, SampleDataFactoryTags.NAME_ATTR, queryName, XmlWriterSupport.OPEN);
 
-      xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "static-query", XmlWriterSupport.OPEN);
+      xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.STATIC_QUERY_TAG, XmlWriterSupport.OPEN);
       xmlWriter.writeTextNormalized(query, false);
       xmlWriter.writeCloseTag();
 
@@ -103,11 +101,11 @@ public class SampleDataFactoryBundleWriterHandler implements BundleDataFactoryWr
       {
         if (StringUtils.isEmpty(queryScriptLanguage))
         {
-          xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "script", XmlWriterSupport.OPEN);
+          xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.SCRIPT_TAG, XmlWriterSupport.OPEN);
         }
         else
         {
-          xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, "script", "language", queryScriptLanguage, XmlWriterSupport.OPEN);
+          xmlWriter.writeTag(SampleDataSourceModule.NAMESPACE, SampleDataFactoryTags.SCRIPT_TAG, SampleDataFactoryTags.LANGUAGE_ATTR, queryScriptLanguage, XmlWriterSupport.OPEN);
         }
         xmlWriter.writeTextNormalized(queryScript, false);
         xmlWriter.writeCloseTag();

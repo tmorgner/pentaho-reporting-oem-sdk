@@ -1,4 +1,4 @@
-package org.pentaho.reporting.sdk.sequence;
+package org.pentaho.reporting.sdk.datasource;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,21 +21,21 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
 {
   public static final String YAHOO_QUERY_DEFAULT =
       "http://query.yahooapis.com/v1/public/yql?q={0}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-  private String queryPattern;
+  private String urlPattern;
 
   public SampleDataFactory()
   {
-    queryPattern = null;
+    urlPattern = null;
   }
 
-  public String getQueryPattern()
+  public String getUrlPattern()
   {
-    return queryPattern;
+    return urlPattern;
   }
 
-  public void setQueryPattern(final String queryPattern)
+  public void setUrlPattern(final String queryPattern)
   {
-    this.queryPattern = queryPattern;
+    this.urlPattern = queryPattern;
   }
 
   public void close()
@@ -49,7 +49,7 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
     String query = parametrizer.translateAndLookup(realQuery);
 
     String queryEncoded = URLEncoder.encodeUTF8(query);
-    String urlPattern = queryPattern != null ? queryPattern : YAHOO_QUERY_DEFAULT;
+    String urlPattern = this.urlPattern != null ? this.urlPattern : YAHOO_QUERY_DEFAULT;
     StringBuilder b = new StringBuilder();
     b.append(MessageFormat.format(urlPattern, queryEncoded));
 
@@ -97,7 +97,7 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
 
   public String getDisplayConnectionName()
   {
-    return queryPattern != null ? queryPattern : YAHOO_QUERY_DEFAULT;
+    return urlPattern != null ? urlPattern : YAHOO_QUERY_DEFAULT;
   }
 
   protected String[] getReferencedFieldsInternal(final String query,
@@ -115,7 +115,7 @@ public class SampleDataFactory extends AbstractScriptableDataFactory
   {
     ArrayList<String> hash = new ArrayList<String>();
     hash.add(realQuery);
-    hash.add(queryPattern);
+    hash.add(urlPattern);
     return hash;
 
   }

@@ -1,10 +1,11 @@
-package org.pentaho.reporting.sdk.sequence;
+package org.pentaho.reporting.sdk.datasource;
 
 import java.net.URISyntaxException;
 
 import org.pentaho.reporting.engine.classic.core.DataFactory;
 import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
 import org.pentaho.reporting.engine.classic.core.testsupport.DataSourceTestBase;
+import org.pentaho.reporting.sdk.datasource.SampleDataFactory;
 
 public class SampleDataFactoryTest extends DataSourceTestBase
 {
@@ -39,7 +40,7 @@ public class SampleDataFactoryTest extends DataSourceTestBase
     try
     {
       SampleDataFactory sampleDataFactory = new SampleDataFactory();
-      sampleDataFactory.setQueryPattern(getClass().getResource("SampleQuery.json").toURI().toASCIIString());
+      sampleDataFactory.setUrlPattern(getClass().getResource("SampleQuery.json").toURI().toASCIIString());
       sampleDataFactory.setQuery("default", s);
       return sampleDataFactory;
     }

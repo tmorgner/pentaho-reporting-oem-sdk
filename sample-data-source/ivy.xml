@@ -33,6 +33,10 @@
                 rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
     <dependency org="net.minidev" name="json-smart" rev="1.2"/>
 
+    <dependency org="org.fife.ui" name="rsyntaxtextarea" rev="1.3.2"
+                transitive="false" conf="default_external->default"/>
+
+
     <dependency org="junit" name="junit" rev="4.10" transitive="false" conf="test->default"/>
     <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-core-test"
                 rev="${pentaho-reporting.version}" transitive="false" changing="true" conf="test->default"/>

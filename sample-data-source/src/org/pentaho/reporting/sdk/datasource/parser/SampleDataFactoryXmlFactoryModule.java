@@ -1,10 +1,9 @@
-package org.pentaho.reporting.sdk.sequence.parser;
+package org.pentaho.reporting.sdk.datasource.parser;
 
 import org.pentaho.reporting.libraries.xmlns.parser.XmlDocumentInfo;
 import org.pentaho.reporting.libraries.xmlns.parser.XmlFactoryModule;
 import org.pentaho.reporting.libraries.xmlns.parser.XmlReadHandler;
-import org.pentaho.reporting.sdk.sequence.SampleDataSourceModule;
-import org.pentaho.reporting.sdk.sequence.writer.SampleDataFactoryBundleWriterHandler;
+import org.pentaho.reporting.sdk.datasource.SampleDataSourceModule;
 
 public class SampleDataFactoryXmlFactoryModule implements XmlFactoryModule
 {
@@ -14,7 +13,7 @@ public class SampleDataFactoryXmlFactoryModule implements XmlFactoryModule
 
   public XmlReadHandler createReadHandler(final XmlDocumentInfo xmlDocumentInfo)
   {
-    return null;
+    return new SampleDataFactoryReadHandler();
   }
 
   public int getDocumentSupport(final XmlDocumentInfo documentInfo)
@@ -26,12 +25,12 @@ public class SampleDataFactoryXmlFactoryModule implements XmlFactoryModule
       {
         return XmlFactoryModule.NOT_RECOGNIZED;
       }
-      else if (SampleDataFactoryBundleWriterHandler.ROOT_ELEMENT_TAG.equals(documentInfo.getRootElement()))
+      else if (SampleDataFactoryTags.ROOT_ELEMENT_TAG.equals(documentInfo.getRootElement()))
       {
         return XmlFactoryModule.RECOGNIZED_BY_NAMESPACE;
       }
     }
-    else if (SampleDataFactoryBundleWriterHandler.ROOT_ELEMENT_TAG.equals(documentInfo.getRootElement()))
+    else if (SampleDataFactoryTags.ROOT_ELEMENT_TAG.equals(documentInfo.getRootElement()))
     {
       return XmlFactoryModule.RECOGNIZED_BY_TAGNAME;
     }

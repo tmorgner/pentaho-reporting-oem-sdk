@@ -1,8 +1,8 @@
 <meta-data xmlns="http://reporting.pentaho.org/namespaces/engine/classic/metadata/1.0">
 
-  <data-factory name="org.pentaho.reporting.sdk.sequence.SampleDataFactory"
+  <data-factory name="org.pentaho.reporting.sdk.datasource.SampleDataFactory"
                 bundle-name="org.pentaho.reporting.sdk.sequence.SampleDataFactoryBundle"
-                impl="org.pentaho.reporting.sdk.sequence.SampleDataFactoryCore"
+                impl="org.pentaho.reporting.sdk.datasource.SampleDataFactoryCore"
                 expert="true" deprecated="false"/>
 
 </meta-data>
