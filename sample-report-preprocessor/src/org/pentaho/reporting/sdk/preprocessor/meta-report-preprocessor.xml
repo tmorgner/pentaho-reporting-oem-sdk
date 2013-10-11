@@ -2,5 +2,9 @@
   <pre-processor class="org.pentaho.reporting.sdk.preprocessor.SamplePreProcessor"
                  bundle-name="org.pentaho.reporting.sdk.preprocessor.SamplePreProcessorBundle"
                  expert="false" hidden="false" preferred="false">
+    <property name="color" mandatory="false" preferred="false" value-role="Value" expert="false" hidden="false"/>
+    <property name="field" mandatory="true" preferred="true" value-role="Field" expert="false" hidden="false"/>
+    <property name="width" mandatory="false" preferred="false" value-role="Value" expert="true" hidden="false"/>
+    <property name="x" mandatory="false" preferred="false" value-role="Value" expert="true" hidden="false"/>
   </pre-processor>
 </meta-data>
