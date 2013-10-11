@@ -42,7 +42,8 @@ public abstract class ExpressionTestBase
   @Test
   public void testMetaData() throws Exception
   {
-    ExpressionTestHelper.validateElementMetaData(HelloWorldExpression.class);
+    Expression expression = create("relational", null, COLUMN_DIMENSION_B);
+    ExpressionTestHelper.validateElementMetaData(expression.getClass());
   }
 
   protected abstract TableModel createTableModel();
