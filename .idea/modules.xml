@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sample-data-sequence/sample-data-sequence.iml" filepath="$PROJECT_DIR$/sample-data-sequence/sample-data-sequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-data-source/sample-data-source.iml" filepath="$PROJECT_DIR$/sample-data-source/sample-data-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-drilldown-profile/sample-drilldown-profile.iml" filepath="$PROJECT_DIR$/sample-drilldown-profile/sample-drilldown-profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-drilldown-profile/sample-drilldown-profile.iml" filepath="$PROJECT_DIR$/sample-drilldown-profile/sample-drilldown-profile.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-element/sample-element.iml" filepath="$PROJECT_DIR$/sample-element/sample-element.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-expression/sample-expression.iml" filepath="$PROJECT_DIR$/sample-expression/sample-expression.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-formula-function/sample-formula-function.iml" filepath="$PROJECT_DIR$/sample-formula-function/sample-formula-function.iml" />
