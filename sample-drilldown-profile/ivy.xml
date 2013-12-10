@@ -20,8 +20,8 @@
     <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-drill-down"
                 rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
     <dependency org="pentaho-report-designer" name="report-designer-ext-pentaho"
-                rev="${pentaho-reporting.version}" transitive="false" changing="true">
-      <exclude org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-reportdesigner-parser" />
+                rev="${pentaho-reporting.version}" transitive="true" changing="true">
+      <exclude org="pentaho-reporting-engine" module="pentaho-reporting-engine-classic-extensions-reportdesigner-parser" />
     </dependency>
 
     <dependency org="org.slf4j" name="slf4j-jcl" rev="1.6.4" transitive="false"/>
