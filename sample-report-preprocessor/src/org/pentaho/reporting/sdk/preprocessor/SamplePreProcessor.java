@@ -9,7 +9,7 @@ import org.pentaho.reporting.engine.classic.core.Element;
 import org.pentaho.reporting.engine.classic.core.MasterReport;
 import org.pentaho.reporting.engine.classic.core.PageFooter;
 import org.pentaho.reporting.engine.classic.core.ReportProcessingException;
-import org.pentaho.reporting.engine.classic.core.filter.types.TextFieldType;
+import org.pentaho.reporting.engine.classic.core.filter.types.LabelType;
 import org.pentaho.reporting.engine.classic.core.states.datarow.DefaultFlowController;
 import org.pentaho.reporting.engine.classic.core.style.BandStyleKeys;
 import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
@@ -17,12 +17,14 @@ import org.pentaho.reporting.engine.classic.core.style.ElementStyleKeys;
 public class SamplePreProcessor extends AbstractReportPreProcessor
 {
   private Color color;
-  private String field;
+  private String text;
   private float width;
   private float x;
 
   public SamplePreProcessor()
   {
+    color = Color.BLACK;
+    text = "Hello World!";
   }
 
   public Color getColor()
@@ -35,14 +37,14 @@ public class SamplePreProcessor extends AbstractReportPreProcessor
     this.color = color;
   }
 
-  public String getField()
+  public String getText()
   {
-    return field;
+    return text;
   }
 
-  public void setField(final String field)
+  public void setText(final String text)
   {
-    this.field = field;
+    this.text = text;
   }
 
   public float getWidth()
@@ -87,8 +89,8 @@ public class SamplePreProcessor extends AbstractReportPreProcessor
     oldContent.setLayout(pageFooter.getLayout());
 
     Element textField = new Element();
-    textField.setElementType(TextFieldType.INSTANCE);
-    textField.setAttribute(AttributeNames.Core.NAMESPACE, AttributeNames.Core.FIELD, field);
+    textField.setElementType(LabelType.INSTANCE);
+    textField.setAttribute(AttributeNames.Core.NAMESPACE, AttributeNames.Core.VALUE, text);
     textField.getStyle().setStyleProperty(ElementStyleKeys.PAINT, color);
     textField.getStyle().setStyleProperty(ElementStyleKeys.POS_X, x);
     textField.getStyle().setStyleProperty(ElementStyleKeys.MIN_WIDTH, x);
