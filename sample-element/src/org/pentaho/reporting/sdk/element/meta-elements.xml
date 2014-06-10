@@ -4,7 +4,8 @@
 
   <element name="sdk-sample-text-element" expert="false" hidden="false" preferred="false"
            bundle-name="org.pentaho.reporting.sdk.element.SampleTextElementTypeBundle"
-           implementation="org.pentaho.reporting.sdk.element.SampleTextElementType">
+           implementation="org.pentaho.reporting.sdk.element.SampleTextElementType"
+           namespace="http://reporting.pentaho.org/namespaces/engine/classic/sdk/sample-element/1.0">
 
     <attribute-group-ref ref="common-attributes"/>
     <attribute-group-ref ref="interactivity"/>
@@ -29,7 +30,8 @@
 
   <element name="sdk-sample-graphics-element" expert="false" hidden="false" preferred="false"
            bundle-name="org.pentaho.reporting.sdk.element.SampleGraphicsElementTypeBundle"
-           implementation="org.pentaho.reporting.sdk.element.SampleGraphicsElementType">
+           implementation="org.pentaho.reporting.sdk.element.SampleGraphicsElementType"
+           namespace="http://reporting.pentaho.org/namespaces/engine/classic/sdk/sample-element/1.0">
 
     <attribute-group-ref ref="common-attributes"/>
     <attribute-group-ref ref="interactivity"/>

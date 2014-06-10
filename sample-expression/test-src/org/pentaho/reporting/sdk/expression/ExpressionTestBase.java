@@ -77,6 +77,7 @@ public abstract class ExpressionTestBase
   {
     final MasterReport report = configureReport(createRelationalReport(createTableModel()), true);
 
+    // PRD-4728 - seems the result is off for either crosstabs or relational reports.
     DebugReportRunner.execGraphics2D(report);
   }
 
