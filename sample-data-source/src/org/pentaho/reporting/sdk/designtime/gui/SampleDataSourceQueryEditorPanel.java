@@ -5,12 +5,12 @@ import javax.swing.JComponent;
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
 import org.fife.ui.rtextarea.RTextScrollPane;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.model.Query;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.model.QueryDialogModel;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.ui.QueryEditorPanel;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.ui.TextFieldBinding;
 import org.pentaho.reporting.libraries.base.util.ObjectUtilities;
 import org.pentaho.reporting.libraries.base.util.StringUtils;
-import org.pentaho.reporting.sdk.designtime.gui.model.Query;
-import org.pentaho.reporting.sdk.designtime.gui.model.QueryDialogModel;
-import org.pentaho.reporting.sdk.designtime.gui.ui.QueryEditorPanel;
-import org.pentaho.reporting.sdk.designtime.gui.ui.TextFieldBinding;
 
 public class SampleDataSourceQueryEditorPanel extends QueryEditorPanel<String>
 {

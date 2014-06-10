@@ -23,15 +23,14 @@ import javax.swing.SpinnerNumberModel;
 import org.pentaho.reporting.engine.classic.core.DataFactory;
 import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
 import org.pentaho.reporting.engine.classic.core.designtime.DesignTimeContext;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.model.DefaultQueryDialogModel;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.model.Query;
+import org.pentaho.reporting.engine.classic.core.designtime.datafactory.editor.model.QueryDialogModel;
 import org.pentaho.reporting.engine.classic.core.modules.gui.commonswing.ExceptionDialog;
 import org.pentaho.reporting.libraries.base.util.StringUtils;
 import org.pentaho.reporting.libraries.designtime.swing.CommonDialog;
 import org.pentaho.reporting.libraries.designtime.swing.background.DataPreviewDialog;
 import org.pentaho.reporting.sdk.datasource.SampleDataFactory;
-import org.pentaho.reporting.sdk.designtime.gui.model.DefaultQueryDialogModel;
-import org.pentaho.reporting.sdk.designtime.gui.model.Query;
-import org.pentaho.reporting.sdk.designtime.gui.model.QueryDialogModel;
-import org.pentaho.reporting.sdk.designtime.gui.ui.Messages;
 
 public class SampleDataSourceEditorDialog extends CommonDialog
 {
