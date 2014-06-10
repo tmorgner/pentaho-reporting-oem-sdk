@@ -8,6 +8,7 @@ import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
 import org.pentaho.reporting.engine.classic.core.ReportProcessingException;
 import org.pentaho.reporting.engine.classic.core.designtime.DesignTimeContext;
 import org.pentaho.reporting.engine.classic.core.designtime.datafactory.DataFactoryEditorSupport;
+import org.pentaho.reporting.libraries.base.util.ArgumentNullException;
 import org.pentaho.reporting.libraries.designtime.swing.background.CancelEvent;
 import org.pentaho.reporting.libraries.designtime.swing.background.PreviewWorker;
 
@@ -22,6 +23,9 @@ public class DataFactoryPreviewWorker implements PreviewWorker
                                   final String queryName,
                                   final DesignTimeContext context) throws ReportProcessingException
   {
+    ArgumentNullException.validate("queryName", queryName);
+    ArgumentNullException.validate("dataFactory", dataFactory);
+
     this.dataFactory = dataFactory;
     this.queryName = queryName;
     DataFactoryEditorSupport.configureDataFactoryForPreview(dataFactory, context);

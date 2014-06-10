@@ -76,7 +76,7 @@ public class SampleDataSourceEditorDialog extends CommonDialog
 
         final DataPreviewDialog previewDialog = new DataPreviewDialog(SampleDataSourceEditorDialog.this);
         final DataFactoryPreviewWorker worker = new DataFactoryPreviewWorker
-            (createDataFactory(), query.getQuery(), designTimeContext);
+            (createDataFactory(), query.getName(), designTimeContext);
         previewDialog.showData(worker);
 
         final ReportDataFactoryException factoryException = worker.getException();
@@ -141,12 +141,13 @@ public class SampleDataSourceEditorDialog extends CommonDialog
   {
     final JPanel urlPanel = new JPanel();
     urlPanel.setLayout(new BorderLayout());
-    urlPanel.add(new JLabel(Messages.getString("SampleDataSourceEditorDialog.ConnectURL")));
-    urlPanel.add(connectUrlBox);
+    urlPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+    urlPanel.add(new JLabel(Messages.getString("SampleDataSourceEditorDialog.ConnectURL")), BorderLayout.NORTH);
+    urlPanel.add(connectUrlBox, BorderLayout.CENTER);
 
     final JPanel panel = new JPanel();
     panel.setLayout(new BorderLayout());
-    panel.add(editorPanel, BorderLayout.CENTER);
+    panel.add(urlPanel, BorderLayout.NORTH);
     panel.add(editorPanel, BorderLayout.CENTER);
     panel.add(createPreviewButtonsPanel(), BorderLayout.SOUTH);
     return panel;
