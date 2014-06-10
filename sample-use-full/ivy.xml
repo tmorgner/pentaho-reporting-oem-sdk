@@ -31,6 +31,8 @@
                 rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
     <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-olap4j"
                 rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
+    <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-pmd"
+                rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
     <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-kettle"
                 rev="${pentaho-reporting.version}" transitive="true" changing="true"/>
     <dependency org="pentaho-reporting-engine" name="pentaho-reporting-engine-classic-extensions-xpath"
