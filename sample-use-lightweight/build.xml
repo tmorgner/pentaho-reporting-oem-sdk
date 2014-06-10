@@ -39,7 +39,12 @@
     -->
 
     <!-- Override default dist target to do a dist-full instead -->
-    <target name="dist" depends="clean-local-jar,subfloor.dist-full,copy-local-jar"/>
+    <target name="dist" depends="clean-local-jar,subfloor.dist,copy-local-jar"/>
+
+    <target name="test"/>
+    <target name="compile-tests"/>
+    <target name="cobertura"/>
+
 
     <target name="clean-local-jar">
         <delete file="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
