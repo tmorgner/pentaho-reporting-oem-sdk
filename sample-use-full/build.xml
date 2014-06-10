@@ -10,12 +10,20 @@
 <project name="sample-use-full" basedir="." default="default">
 
     <description>
-        This build file provides a lightweight configuration for using the reporting engine in an
-        standalone project.
+        This build file is used to create the API project
+        and works with the build-res/subfloor.xml file.
     </description>
+
 
     <property file="${user.home}/.pentaho-reporting-build-settings.properties"
               description="Per user override settings-file for all pentaho-reporting projects."/>
+
+    <!-- Define the default location of the common build file -->
+    <property name="reporting.build.file" value="./build-res/reporting-shared.xml"
+              description="This is the location of the standardized build-res/reporting-shared.xml file"/>
+
+    <!-- Import the build-res/subfloor.xml file which contains all the default tasks -->
+    <import file="${reporting.build.file}"/>
 
     <!-- Define the default location of the common build file -->
     <property name="common.build.file" value="./build-res/subfloor.xml"
@@ -24,56 +32,25 @@
     <!-- Import the build-res/subfloor.xml file which contains all the default tasks -->
     <import file="${common.build.file}"/>
 
-    <!--=======================================================================
-        This project does not have test-cases, so build is same as build-testless.
-        If you add JUnit test-cases, delete this target definition.
-
-        Runs a typical continuous integration build including project dist,
-        test, and coverage artifacts
-        ====================================================================-->
-    <target name="build" depends="build-testless"/>
-
-    <!--=======================================================================
-        continuous
-
-        Runs a typical continuous integration build including project dist,
-        test, and coverage artifacts
-        ====================================================================-->
-    <target name="continuous-local" depends="build,publish-local"/>
-
-
-    <!--=======================================================================
-        continuous-testless
-
-        Runs a typical continuous integration build including project dist,
-        and coverage artifacts
-        ====================================================================-->
-    <target name="continuous-local-testless" depends="build-testless,publish-local"/>
-
-    <!--
-      AS STATED ABOVE, THE ONLY TASKS THAT SHOULD EXIST IN THIS BUILD FILE ARE
-      THE TASKS THAT NEED TO DIFFER FROM THE DEFAULT IMPLEMENTATION OF THE TASKS
-      FOUND IN build-res/subfloor.xml.
-    -->
-
     <!-- Override default dist target to do a dist-full instead -->
-    <target name="dist" depends="clean-local-jar,dist-full,copy-local-jar"/>
+    <target name="dist" depends="clean-local-jar,subfloor.dist,copy-local-jar"/>
 
     <target name="clean-local-jar">
-      <delete file="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
+        <delete file="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
     </target>
 
     <target name="copy-local-jar">
-      <copy file="${dist.dir}/${ivy.artifact.id}-${project.revision}.jar" tofile="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
+        <copy file="${dist.dir}/${ivy.artifact.id}-${project.revision}.jar"
+              tofile="${ivy.artifact.id}-${project.revision}.jar" failonerror="false"/>
     </target>
 
     <target name="generate.manifest" depends="subfloor.generate.manifest">
-      <manifestclasspath property="jar.classpath" jarfile="dist.jar">
-        <classpath refid="classpath" />
-      </manifestclasspath>
+        <manifestclasspath property="jar.classpath" jarfile="dist.jar">
+            <classpath refid="classpath"/>
+        </manifestclasspath>
 
-      <manifest file="${dist.manifest.file}" mode="update">
-        <attribute name="Class-Path" value="${jar.classpath}"/>
-      </manifest>
+        <manifest file="${dist.manifest.file}" mode="update">
+            <attribute name="Class-Path" value="${jar.classpath}"/>
+        </manifest>
     </target>
 </project>

@@ -9,49 +9,27 @@
 ============================================================================-->
 <project name="sample-expression" basedir="." default="default">
 
-    <property file="${user.home}/.pentaho-reporting-build-settings.properties"
-              description="Per user override settings-file for all pentaho-reporting projects."/>
-
-    <!-- Define the default location of the common build file -->
-    <property name="common.build.file" value="./build-res/subfloor.xml"
-              description="This is the location of the standardized build-res/subfloor.xml file"/>
-
-    <!-- Import the build-res/subfloor.xml file which contains all the default tasks -->
-    <import file="${common.build.file}"/>
-
-    <!--=======================================================================
-        This project does not have test-cases, so build is same as build-testless.
-        If you add JUnit test-cases, delete this target definition.
-
-        Runs a typical continuous integration build including project dist,
-        test, and coverage artifacts
-        ====================================================================-->
-    <target name="build" depends="build-testless"/>
-
-    <!--=======================================================================
-        continuous
-
-        Runs a typical continuous integration build including project dist,
-        test, and coverage artifacts
-        ====================================================================-->
-    <target name="continuous-local" depends="build,publish-local"/>
+    <description>
+        This build file is used to create the API project
+        and works with the build-res/subfloor.xml file.
+    </description>
 
 
-    <!--=======================================================================
-        continuous-testless
+  <property file="${user.home}/.pentaho-reporting-build-settings.properties"
+                description="Per user override settings-file for all pentaho-reporting projects." />
 
-        Runs a typical continuous integration build including project dist,
-        and coverage artifacts
-        ====================================================================-->
-    <target name="continuous-local-testless" depends="build-testless,publish-local"/>
+  <!-- Define the default location of the common build file -->
+  <property name="reporting.build.file" value="./build-res/reporting-shared.xml"
+            description="This is the location of the standardized build-res/reporting-shared.xml file"/>
 
-    <!--
-      AS STATED ABOVE, THE ONLY TASKS THAT SHOULD EXIST IN THIS BUILD FILE ARE
-      THE TASKS THAT NEED TO DIFFER FROM THE DEFAULT IMPLEMENTATION OF THE TASKS
-      FOUND IN build-res/subfloor.xml.
-    -->
+  <!-- Import the build-res/subfloor.xml file which contains all the default tasks -->
+  <import file="${reporting.build.file}"/>
 
-    <!-- Override default dist target to do a dist-full instead -->
-    <target name="dist" depends="dist-full"/>
+	<!-- Define the default location of the common build file -->
+	<property name="common.build.file" value="./build-res/subfloor.xml"
+		description="This is the location of the standardized build-res/subfloor.xml file"/>
+
+	<!-- Import the build-res/subfloor.xml file which contains all the default tasks -->
+	<import file="${common.build.file}"/>
 
 </project>
