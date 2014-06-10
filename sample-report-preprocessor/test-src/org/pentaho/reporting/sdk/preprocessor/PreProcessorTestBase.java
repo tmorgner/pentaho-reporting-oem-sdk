@@ -11,6 +11,8 @@ import org.pentaho.reporting.engine.classic.core.cache.CachingDataFactory;
 import org.pentaho.reporting.engine.classic.core.designtime.DesignTimeUtil;
 import org.pentaho.reporting.engine.classic.core.function.ProcessingDataFactoryContext;
 import org.pentaho.reporting.engine.classic.core.layout.output.DefaultProcessingContext;
+import org.pentaho.reporting.engine.classic.core.states.NoOpPerformanceMonitorContext;
+import org.pentaho.reporting.engine.classic.core.states.PerformanceMonitorContext;
 import org.pentaho.reporting.engine.classic.core.states.StateUtilities;
 import org.pentaho.reporting.engine.classic.core.states.datarow.DefaultFlowController;
 import org.pentaho.reporting.engine.classic.core.wizard.DataSchemaDefinition;
@@ -45,10 +47,11 @@ public abstract class PreProcessorTestBase
   protected static MasterReport materialize(final MasterReport report,
                                           final ReportPreProcessor processor) throws ReportProcessingException
   {
+    final PerformanceMonitorContext pmc = new NoOpPerformanceMonitorContext();
     final DefaultProcessingContext processingContext = new DefaultProcessingContext(report);
     final DataSchemaDefinition definition = report.getDataSchemaDefinition();
     final DefaultFlowController flowController = new DefaultFlowController(processingContext,
-        definition, StateUtilities.computeParameterValueSet(report));
+        definition, StateUtilities.computeParameterValueSet(report), pmc);
     final CachingDataFactory dataFactory = new CachingDataFactory(report.getDataFactory(), false);
     dataFactory.initialize(new ProcessingDataFactoryContext(processingContext, dataFactory));
 
