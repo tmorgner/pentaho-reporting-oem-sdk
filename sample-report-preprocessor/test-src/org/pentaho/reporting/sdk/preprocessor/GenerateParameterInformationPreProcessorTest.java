@@ -1,7 +1,5 @@
 package org.pentaho.reporting.sdk.preprocessor;
 
-import javax.swing.table.TableModel;
-
 import junit.framework.Assert;
 import org.junit.Test;
 import org.pentaho.reporting.engine.classic.core.AttributeNames;
@@ -12,11 +10,12 @@ import org.pentaho.reporting.engine.classic.core.StaticDataRow;
 import org.pentaho.reporting.engine.classic.core.SubReport;
 import org.pentaho.reporting.engine.classic.core.TableDataFactory;
 import org.pentaho.reporting.engine.classic.core.filter.types.bands.SubReportType;
-import org.pentaho.reporting.engine.classic.core.layout.ModelPrinter;
 import org.pentaho.reporting.engine.classic.core.layout.model.LayoutNodeTypes;
 import org.pentaho.reporting.engine.classic.core.layout.model.LogicalPageBox;
 import org.pentaho.reporting.engine.classic.core.layout.model.RenderNode;
 import org.pentaho.reporting.engine.classic.core.layout.table.TableTestUtil;
+import org.pentaho.reporting.engine.classic.core.metadata.ReportPreProcessorMetaData;
+import org.pentaho.reporting.engine.classic.core.metadata.ReportPreProcessorRegistry;
 import org.pentaho.reporting.engine.classic.core.parameters.DefaultListParameter;
 import org.pentaho.reporting.engine.classic.core.parameters.DefaultParameterDefinition;
 import org.pentaho.reporting.engine.classic.core.parameters.PlainParameter;
@@ -25,27 +24,31 @@ import org.pentaho.reporting.engine.classic.core.testsupport.selector.MatchFacto
 import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
 import org.pentaho.reporting.engine.classic.wizard.WizardProcessor;
 
-public class GenerateParameterInformationPreProcessorTest extends PreProcessorTestBase
-{
-  public GenerateParameterInformationPreProcessorTest()
-  {
+import javax.swing.table.TableModel;
+
+public class GenerateParameterInformationPreProcessorTest extends PreProcessorTestBase {
+  public GenerateParameterInformationPreProcessorTest() {
   }
 
-  protected ReportPreProcessor create()
-  {
+  protected ReportPreProcessor create() {
     GenerateParameterInformationPreProcessor samplePreProcessor = new GenerateParameterInformationPreProcessor();
     return samplePreProcessor;
   }
 
   @Test
-  public void testApplyOnRun() throws Exception
-  {
-    ReportPreProcessor preProcessor = create();
+  public void testAutoApplyFlag() {
+    ReportPreProcessorMetaData meta =
+            ReportPreProcessorRegistry.getInstance().getReportPreProcessorMetaData
+                    (GenerateParameterInformationPreProcessor.class.getName());
+    Assert.assertTrue(meta.isAutoProcessor());
+  }
+
+  @Test
+  public void testApplyOnRun() throws Exception {
+    // no need to manually add the pre-processor here, as the pre-processor is marked as auto-added.
     MasterReport report = configureReport();
-    report.addPreProcessor(preProcessor);
 
     LogicalPageBox logicalPageBox = DebugReportRunner.layoutPage(report, 0);
-    ModelPrinter.INSTANCE.print(logicalPageBox);
 
     RenderNode[] subReports = MatchFactory.findElementsByElementType(logicalPageBox, SubReportType.INSTANCE);
     Assert.assertEquals("SubReport has been added", 1, subReports.length);
@@ -54,13 +57,12 @@ public class GenerateParameterInformationPreProcessorTest extends PreProcessorTe
     Assert.assertEquals("Generated text-field have been printed", 6, fields.length);
   }
 
-  private MasterReport configureReport()
-  {
+  private MasterReport configureReport() {
     PlainParameter plainParam = new PlainParameter("text-parameter", String.class);
     plainParam.setDefaultValue("Hello World!");
 
     DefaultListParameter listParam = new DefaultListParameter
-        ("param-query" , "key", "value", "list-param", true, false, String.class);
+            ("param-query", "key", "value", "list-param", true, false, String.class);
     listParam.setDefaultValue(new String[]{"One", "Two", "Three"});
 
     DefaultParameterDefinition params = new DefaultParameterDefinition();
@@ -86,8 +88,7 @@ public class GenerateParameterInformationPreProcessorTest extends PreProcessorTe
   }
 
   @Test
-  public void testApply() throws Exception
-  {
+  public void testApply() throws Exception {
     ReportPreProcessor preProcessor = create();
 
     MasterReport report = configureReport();

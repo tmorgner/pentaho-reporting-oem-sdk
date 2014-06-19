@@ -13,7 +13,9 @@
           <root url="file://$MODULE_DIR$/lib/internal" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../prd/pentaho-reporting/engine/extensions-drilldown/source" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib/internal" recursive="false" />
       </library>
     </orderEntry>

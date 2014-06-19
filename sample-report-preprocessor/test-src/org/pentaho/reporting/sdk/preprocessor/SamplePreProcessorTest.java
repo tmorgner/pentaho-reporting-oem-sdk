@@ -42,13 +42,12 @@ public class SamplePreProcessorTest extends PreProcessorTestBase
     report.getPageFooter().addElement(TableTestUtil.createDataItem("Dummy Item"));
 
     LogicalPageBox logicalPageBox = DebugReportRunner.layoutPage(report, 0);
-    ModelPrinter.INSTANCE.print(logicalPageBox);
+    // Use this to create a print-out of the layout model. This allows you to inspect the model
+    // more easily than with the debugger.
+    //ModelPrinter.INSTANCE.print(logicalPageBox);
 
     RenderNode[] labels = MatchFactory.findElementsByElementType(logicalPageBox, LabelType.INSTANCE);
-    Assert.assertEquals("Original label has been printed", 3, labels.length);
-
-    RenderNode[] fields = MatchFactory.findElementsByElementType(logicalPageBox, TextFieldType.INSTANCE);
-    Assert.assertEquals("Generated text-field has been printed", 7, fields.length);
+    Assert.assertEquals("Original label has been printed", 5, labels.length);
   }
 
   @Test
