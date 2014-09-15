@@ -1,10 +1,5 @@
 package org.pentaho.reporting.sdk.expression;
 
-import java.awt.Color;
-import java.awt.Insets;
-import java.awt.print.PageFormat;
-import javax.swing.table.TableModel;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.pentaho.reporting.engine.classic.core.ClassicEngineBoot;
@@ -13,6 +8,7 @@ import org.pentaho.reporting.engine.classic.core.SimplePageDefinition;
 import org.pentaho.reporting.engine.classic.core.TableDataFactory;
 import org.pentaho.reporting.engine.classic.core.designtime.DesignTimeDataSchemaModel;
 import org.pentaho.reporting.engine.classic.core.elementfactory.CrosstabBuilder;
+import org.pentaho.reporting.engine.classic.core.function.AggregationFunction;
 import org.pentaho.reporting.engine.classic.core.function.Expression;
 import org.pentaho.reporting.engine.classic.core.modules.gui.base.PreviewDialog;
 import org.pentaho.reporting.engine.classic.core.testsupport.DebugReportRunner;
@@ -21,27 +17,28 @@ import org.pentaho.reporting.engine.classic.core.util.PageSize;
 import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
 import org.pentaho.reporting.libraries.designtime.swing.LibSwingUtil;
 
-public abstract class ExpressionTestBase
-{
+import javax.swing.table.TableModel;
+import java.awt.Color;
+import java.awt.Insets;
+import java.awt.print.PageFormat;
+
+public abstract class ExpressionTestBase {
   public static final String ROW_DIMENSION_A = "Row-Dimension-A";
   public static final String ROW_DIMENSION_B = "Row-Dimension-B";
   public static final String COLUMN_DIMENSION_A = "Column-Dimension-A";
   public static final String COLUMN_DIMENSION_B = "Column-Dimension-B";
   public static final String VALUE = "Value";
 
-  public ExpressionTestBase()
-  {
+  public ExpressionTestBase() {
   }
 
   @Before
-  public void setUp() throws Exception
-  {
+  public void setUp() throws Exception {
     ClassicEngineBoot.getInstance().start();
   }
 
   @Test
-  public void testMetaData() throws Exception
-  {
+  public void testMetaData() throws Exception {
     Expression expression = create("relational", null, COLUMN_DIMENSION_B);
     ExpressionTestHelper.validateElementMetaData(expression.getClass());
   }
@@ -49,8 +46,7 @@ public abstract class ExpressionTestBase
   protected abstract TableModel createTableModel();
 
 
-  protected void configureStandardColumns(final TypedTableModel model)
-  {
+  protected void configureStandardColumns(final TypedTableModel model) {
     model.addColumn(ROW_DIMENSION_A, String.class);
     model.addColumn(ROW_DIMENSION_B, String.class);
     model.addColumn(COLUMN_DIMENSION_A, String.class);
@@ -65,38 +61,47 @@ public abstract class ExpressionTestBase
   }
 
   @Test
-  public void testCrosstabReport() throws Exception
-  {
-    final MasterReport report = configureReport(createCrosstabReport(createTableModel()), false);
-
+  public void testCrosstabReport() throws Exception {
+    MasterReport crosstabReport = createCrosstabReport(createTableModel());
+    if (crosstabReport == null) {
+      return;
+    }
+    final MasterReport report = configureReport(crosstabReport, false);
     DebugReportRunner.execGraphics2D(report);
   }
 
   @Test
-  public void testRelationalReport() throws Exception
-  {
+  public void testRelationalReport() throws Exception {
     final MasterReport report = configureReport(createRelationalReport(createTableModel()), true);
 
     // PRD-4728 - seems the result is off for either crosstabs or relational reports.
     DebugReportRunner.execGraphics2D(report);
   }
 
+  protected AggregationFunction createAggregateFunction(final String name,
+                                                        final String filter,
+                                                        final String group) {
+    Expression expression = create(name, filter, group);
+    if (expression instanceof AggregationFunction) {
+      return (AggregationFunction) expression;
+    }
+    return null;
+  }
+
   protected abstract Expression create(final String name,
                                        final String filter,
                                        final String group);
 
-  protected boolean isFailHardOnError()
-  {
+
+  protected boolean isFailHardOnError() {
     return false;
   }
 
-  private MasterReport configureReport(MasterReport report, boolean relational)
-  {
+  private MasterReport configureReport(MasterReport report, boolean relational) {
     report.addExpression(create("relational", null, COLUMN_DIMENSION_B));
     report.addExpression(new ValidateFunctionResultExpression("#relational", isFailHardOnError(), null));
 
-    if (relational)
-    {
+    if (relational) {
       return report;
     }
 
@@ -118,15 +123,17 @@ public abstract class ExpressionTestBase
     return report;
   }
 
-  protected MasterReport createCrosstabReport(final TableModel tableModel)
-  {
+  protected MasterReport createCrosstabReport(final TableModel tableModel) {
     final MasterReport report = new MasterReport();
     report.setPageDefinition(new SimplePageDefinition(PageSize.A3, PageFormat.LANDSCAPE, new Insets(0, 0, 0, 0)));
     report.setDataFactory(new TableDataFactory("query", tableModel));
     report.setQuery("query");
     final DesignTimeDataSchemaModel dataSchemaModel = new DesignTimeDataSchemaModel(report);
 
-    Expression dummy = create("dummy", null, null);
+    AggregationFunction dummy = createAggregateFunction("dummy", null, null);
+    if (dummy == null) {
+      return null;
+    }
 
     final CrosstabBuilder builder = new CrosstabBuilder(dataSchemaModel);
     builder.addRowDimension(ROW_DIMENSION_A);
@@ -139,8 +146,7 @@ public abstract class ExpressionTestBase
   }
 
   protected MasterReport createRelationalReport(final TableModel tableModel,
-                                                final String... additionalFields)
-  {
+                                                final String... additionalFields) {
     final MasterReport report = new MasterReport();
     report.setPageDefinition(new SimplePageDefinition(PageSize.A3, PageFormat.LANDSCAPE, new Insets(0, 0, 0, 0)));
     report.setDataFactory(new TableDataFactory("query", tableModel));
@@ -154,8 +160,7 @@ public abstract class ExpressionTestBase
     builder.addGroup(COLUMN_DIMENSION_B);
     builder.addDetails(VALUE, null, Color.lightGray);
     builder.addDetails("relational", null, Color.yellow);
-    for (int i = 0; i < additionalFields.length; i++)
-    {
+    for (int i = 0; i < additionalFields.length; i++) {
       String additionalField = additionalFields[i];
       builder.addDetails(additionalField, null, null);
     }
@@ -164,8 +169,7 @@ public abstract class ExpressionTestBase
     return report;
   }
 
-  protected void showRelationalDialog()
-  {
+  protected void showRelationalDialog() {
     PreviewDialog dialog = new PreviewDialog(configureReport(createRelationalReport(createTableModel()), true));
     dialog.setModal(true);
     dialog.pack();
@@ -173,10 +177,9 @@ public abstract class ExpressionTestBase
     dialog.setVisible(true);
   }
 
-  protected void showRelationalGeneratorDialog()
-  {
+  protected void showRelationalGeneratorDialog() {
     MasterReport relationalReport = createRelationalReport(createTableModel(),
-        "cell", "row-b", "row-a", "column-a", "column-b");
+            "cell", "row-b", "row-a", "column-a", "column-b");
     PreviewDialog dialog = new PreviewDialog(configureReport(relationalReport, false));
     dialog.setModal(true);
     dialog.pack();
@@ -185,9 +188,12 @@ public abstract class ExpressionTestBase
   }
 
 
-  protected void showCrosstabDialog()
-  {
-    PreviewDialog dialog = new PreviewDialog(configureReport(createCrosstabReport(createTableModel()), false));
+  protected void showCrosstabDialog() {
+    MasterReport report = createCrosstabReport(createTableModel());
+    if (report == null) {
+      return;
+    }
+    PreviewDialog dialog = new PreviewDialog(configureReport(report, false));
     dialog.setModal(true);
     dialog.pack();
     LibSwingUtil.centerFrameOnScreen(dialog);
