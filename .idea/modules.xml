@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/sample-generate-report-files/sample-generate-report-files.iml" filepath="$PROJECT_DIR$/sample-generate-report-files/sample-generate-report-files.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-module/sample-module.iml" filepath="$PROJECT_DIR$/sample-module/sample-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-report-preprocessor/sample-report-preprocessor.iml" filepath="$PROJECT_DIR$/sample-report-preprocessor/sample-report-preprocessor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-server/sample-server.iml" filepath="$PROJECT_DIR$/sample-server/sample-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-use-full/sample-use-full.iml" filepath="$PROJECT_DIR$/sample-use-full/sample-use-full.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-use-lightweight/sample-use-lightweight.iml" filepath="$PROJECT_DIR$/sample-use-lightweight/sample-use-lightweight.iml" />
     </modules>
