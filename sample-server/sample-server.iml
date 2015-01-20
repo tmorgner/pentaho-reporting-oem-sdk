@@ -13,8 +13,12 @@
           <root url="file://$MODULE_DIR$/lib/internal" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/internal" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/servlet-api-2.5-sources.jar!/" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib/internal" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/lib/internal" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>

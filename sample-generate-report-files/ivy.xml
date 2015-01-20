@@ -34,5 +34,6 @@
 
 		    <dependency org="org.slf4j" name="slf4j-jcl" rev="1.6.4" transitive="false"/>
 		    <dependency org="org.slf4j" name="slf4j-api" rev="1.6.4" transitive="false"/>
+		    <dependency org="net.sf.jopt-simple" name="jopt-simple" rev="4.8" transitive="false"/>
 	</dependencies>
 </ivy-module>
