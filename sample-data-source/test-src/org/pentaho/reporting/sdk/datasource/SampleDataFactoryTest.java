@@ -24,52 +24,41 @@
 
 package org.pentaho.reporting.sdk.datasource;
 
-import java.net.URISyntaxException;
-
 import org.pentaho.reporting.engine.classic.core.DataFactory;
 import org.pentaho.reporting.engine.classic.core.ReportDataFactoryException;
 import org.pentaho.reporting.engine.classic.core.testsupport.DataSourceTestBase;
-import org.pentaho.reporting.sdk.datasource.SampleDataFactory;
 
-public class SampleDataFactoryTest extends DataSourceTestBase
-{
+import java.net.URISyntaxException;
+
+public class SampleDataFactoryTest extends DataSourceTestBase {
   public static final String[][] QUERIES_AND_RESULTS = new String[][]{{"SELECT * FROM yourDatabase", "query1-results.txt"}};
 
-  public SampleDataFactoryTest()
-  {
+  public SampleDataFactoryTest() {
   }
 
-  public void testSaveAndLoad() throws Exception
-  {
+  public void testSaveAndLoad() throws Exception {
     runSaveAndLoad(QUERIES_AND_RESULTS);
   }
 
-  public void testDerive() throws Exception
-  {
+  public void testDerive() throws Exception {
     runDerive(QUERIES_AND_RESULTS);
   }
 
-  public void testSerialize() throws Exception
-  {
+  public void testSerialize() throws Exception {
     runSerialize(QUERIES_AND_RESULTS);
   }
 
-  public void testQuery() throws Exception
-  {
+  public void testQuery() throws Exception {
     runTest(QUERIES_AND_RESULTS);
   }
 
-  protected DataFactory createDataFactory(final String s) throws ReportDataFactoryException
-  {
-    try
-    {
+  protected DataFactory createDataFactory(final String s) throws ReportDataFactoryException {
+    try {
       SampleDataFactory sampleDataFactory = new SampleDataFactory();
       sampleDataFactory.setUrlPattern(getClass().getResource("SampleQuery.json").toURI().toASCIIString());
       sampleDataFactory.setQuery("default", s);
       return sampleDataFactory;
-    }
-    catch (URISyntaxException e)
-    {
+    } catch (URISyntaxException e) {
       throw new ReportDataFactoryException("Failed", e);
     }
   }
