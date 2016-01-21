@@ -24,10 +24,6 @@
 
 package sdk.generate.patch;
 
-import joptsimple.OptionException;
-import joptsimple.OptionParser;
-import joptsimple.OptionSet;
-import joptsimple.OptionSpec;
 import org.pentaho.reporting.engine.classic.core.AbstractReportDefinition;
 import org.pentaho.reporting.engine.classic.core.CompoundDataFactory;
 import org.pentaho.reporting.engine.classic.core.DataFactory;
@@ -47,43 +43,25 @@ import java.io.File;
 import java.io.IOException;
 
 public class PatchAReportSample {
-  public static void _main(String[] args) throws IOException {
-    OptionParser parser = new OptionParser();
-    OptionSpec<String> source = parser.accepts("source").withRequiredArg().ofType(String.class).required().describedAs("Source File");
-    OptionSpec<String> target = parser.accepts("target").withOptionalArg().ofType(String.class).required().describedAs("Target File");
 
-    try {
-      OptionSet parse = parser.parse(args);
-      String sourceText = parse.valueOf(source);
-      String targetText = parse.valueOf(target);
-
-      processReport(sourceText, targetText);
-
-    } catch (OptionException oe) {
-      parser.printHelpOn(System.out);
-    } catch (ResourceException | ContentIOException | BundleWriterException e) {
-      e.printStackTrace();
-    }
-  }
-
-  public static void main(String[] args) throws ResourceException, ContentIOException, BundleWriterException, IOException {
-    processReport(args[0], args[1]);
-  }
-
-  private static void processReport(String sourceText, String targetText)
+  public static void processReport(String sourceText, String targetText)
           throws ResourceException, IOException, BundleWriterException, ContentIOException {
 
+    // load a report ..
     File sourceFile = new File(sourceText);
     MasterReport report = (MasterReport) new ResourceManager().createDirectly(sourceFile, MasterReport.class).getResource();
 
+    // .. then do something with it ..
     MasterReport processedReport = manipulateReport(report);
 
-    BundleWriter.writeReportToZipFile(report, new File(targetText));
+    // .. then write the report as PRPT file
+    BundleWriter.writeReportToZipFile(processedReport, new File(targetText));
   }
 
   private static MasterReport manipulateReport(MasterReport report) {
-    new DataSourceStructureVisitor().inspect(report);
-    return report;
+    MasterReport derived = (MasterReport) report.derive();
+    new DataSourceStructureVisitor().inspect(derived);
+    return derived;
   }
 
   private static class DataSourceStructureVisitor extends AbstractStructureVisitor {
@@ -116,6 +94,7 @@ public class PatchAReportSample {
     }
 
     private DataFactory handleDataSource(AbstractReportDefinition reportDefinition, DataFactory dataFactory) {
+      PatchAReportSample.handleDataSource(reportDefinition, dataFactory);
       return dataFactory;
     }
   }

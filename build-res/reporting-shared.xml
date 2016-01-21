@@ -109,4 +109,6 @@
     <antcall target="maven-publish.post"/>
   </target>
 
+  <target name="build" depends="clean-all,resolve,test,dist-source,dist" />
+
 </project>

@@ -169,7 +169,15 @@ This is the build file for the collection of Shims modules to provide support
       </sequential>
     </for>
   </target>
-  
+
+  <target name="default" depends="init">
+    <for list="${modules}" param="module" trim="true">
+      <sequential>
+        <ant antfile="build.xml" dir="@{module}" useNativeBasedir="true" inheritall="false" target="default" />
+      </sequential>
+    </for>
+  </target>
+
   <target name="continuous" depends="init">
     <for list="${modules}" param="module" trim="true">
       <sequential>
