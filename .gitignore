@@ -21,4 +21,4 @@ build-res/module-scripts/
 *.jar
 *.war
 *.ear
-.idea/
+#.idea/
