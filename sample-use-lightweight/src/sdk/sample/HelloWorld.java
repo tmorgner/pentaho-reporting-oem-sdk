@@ -29,7 +29,7 @@ public class HelloWorld {
     System.exit(0);
   }
 
-  private static Band createContainer() {
+  public static Band createContainer() {
     Band band = new Band();
     band.setLayout(BandStyleKeys.LAYOUT_ROW);
     band.getStyle().setStyleProperty(ElementStyleKeys.WIDTH, -100f);
@@ -39,7 +39,7 @@ public class HelloWorld {
     return band;
   }
 
-  private static Element createLabel(String text) {
+  public static Element createLabel(String text) {
     Element e = new Element();
     e.setElementType(LabelType.INSTANCE);
     e.setAttribute(AttributeNames.Core.NAMESPACE, AttributeNames.Core.VALUE, text);
